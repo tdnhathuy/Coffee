@@ -1,4 +1,5 @@
 ﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 
@@ -93,6 +94,17 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
+        }
+
+        public DataTable GetListFoodSold(DateTime dateFrom, DateTime dateTo)
+        {
+            string qr = string.Format("" +
+                "SELECT c.name as [Tên món], SUM(b.count) as [Số lượng bán], FORMAT(c.price, '#,### VNĐ') as [Đơn giá], FORMAT(SUM(b.count) * c.price, '#,### VNĐ') as [Tổng tiền] " +
+                "FROM Bill a, BillInfo b, Food c " +
+                "WHERE a.id = b.idBill AND b.idFood = c.id AND DateCheckIn >= '{0} 00:00:01' AND DateCheckOut <= '{1} 23:59:59' " +
+                "GROUP BY c.name, c.price " +
+                "ORDER BY c.name", dateFrom.ToShortDateString(), dateTo.ToShortDateString());
+            return DataProvider.Instance.ExecuteQuery(qr);
         }
     }
 }

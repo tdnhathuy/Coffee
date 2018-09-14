@@ -30,10 +30,22 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lbBigInvoice = new System.Windows.Forms.Label();
+            this.lbLeastValue = new System.Windows.Forms.Label();
+            this.lbMostValue = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbInvoice = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lbRevenue = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.txbBillID = new System.Windows.Forms.TextBox();
             this.lsvFood = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dtgvBill = new System.Windows.Forms.DataGridView();
             this.btnShowBill = new System.Windows.Forms.Button();
             this.dtpkToDate = new System.Windows.Forms.DateTimePicker();
@@ -66,24 +78,26 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dtgvCategory = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txbTableStatus = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txbTableName = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txbTableID = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dtgvTable = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.btnExportReport = new System.Windows.Forms.Button();
+            this.btnViewReport = new System.Windows.Forms.Button();
+            this.dtpkReportTo = new System.Windows.Forms.DateTimePicker();
+            this.dtpkReportFrom = new System.Windows.Forms.DateTimePicker();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.dtgvListFoodSold = new System.Windows.Forms.DataGridView();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lbRevenue = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lbInvoice = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lbMostValue = new System.Windows.Forms.Label();
-            this.lbLeastValue = new System.Windows.Forms.Label();
-            this.lbBigInvoice = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -91,10 +105,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCategory)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTable)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvListFoodSold)).BeginInit();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -131,6 +146,126 @@
             this.tabPage1.Text = "Thống kê";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.lbBigInvoice);
+            this.groupBox4.Controls.Add(this.lbLeastValue);
+            this.groupBox4.Controls.Add(this.lbMostValue);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.lbInvoice);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.lbRevenue);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(538, 14);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(430, 251);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Thông tin";
+            // 
+            // lbBigInvoice
+            // 
+            this.lbBigInvoice.AutoSize = true;
+            this.lbBigInvoice.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBigInvoice.Location = new System.Drawing.Point(223, 49);
+            this.lbBigInvoice.Name = "lbBigInvoice";
+            this.lbBigInvoice.Size = new System.Drawing.Size(23, 26);
+            this.lbBigInvoice.TabIndex = 9;
+            this.lbBigInvoice.Text = "0";
+            // 
+            // lbLeastValue
+            // 
+            this.lbLeastValue.AutoSize = true;
+            this.lbLeastValue.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLeastValue.Location = new System.Drawing.Point(223, 75);
+            this.lbLeastValue.Name = "lbLeastValue";
+            this.lbLeastValue.Size = new System.Drawing.Size(23, 26);
+            this.lbLeastValue.TabIndex = 8;
+            this.lbLeastValue.Text = "0";
+            // 
+            // lbMostValue
+            // 
+            this.lbMostValue.AutoSize = true;
+            this.lbMostValue.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMostValue.Location = new System.Drawing.Point(223, 101);
+            this.lbMostValue.Name = "lbMostValue";
+            this.lbMostValue.Size = new System.Drawing.Size(23, 26);
+            this.lbMostValue.TabIndex = 7;
+            this.lbMostValue.Text = "0";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(6, 49);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(211, 26);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Hóa đơn trên 200.000:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(6, 75);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(180, 26);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Hóa đơn nhỏ nhất: ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(6, 101);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(176, 26);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Hóa đơn lớn nhất: ";
+            // 
+            // lbInvoice
+            // 
+            this.lbInvoice.AutoSize = true;
+            this.lbInvoice.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInvoice.Location = new System.Drawing.Point(223, 23);
+            this.lbInvoice.Name = "lbInvoice";
+            this.lbInvoice.Size = new System.Drawing.Size(23, 26);
+            this.lbInvoice.TabIndex = 3;
+            this.lbInvoice.Text = "0";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(6, 127);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(108, 26);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Doanh thu:";
+            // 
+            // lbRevenue
+            // 
+            this.lbRevenue.AutoSize = true;
+            this.lbRevenue.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRevenue.Location = new System.Drawing.Point(223, 127);
+            this.lbRevenue.Name = "lbRevenue";
+            this.lbRevenue.Size = new System.Drawing.Size(23, 26);
+            this.lbRevenue.TabIndex = 1;
+            this.lbRevenue.Text = "0";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 23);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(160, 26);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Tổng số hóa đơn:";
+            // 
             // txbBillID
             // 
             this.txbBillID.Location = new System.Drawing.Point(12, 72);
@@ -164,6 +299,11 @@
             // 
             this.columnHeader3.Text = "Số lượng";
             this.columnHeader3.Width = 72;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Thành tiền";
+            this.columnHeader4.Width = 123;
             // 
             // dtgvBill
             // 
@@ -475,6 +615,13 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.txbTableStatus);
+            this.tabPage3.Controls.Add(this.label16);
+            this.tabPage3.Controls.Add(this.txbTableName);
+            this.tabPage3.Controls.Add(this.label15);
+            this.tabPage3.Controls.Add(this.txbTableID);
+            this.tabPage3.Controls.Add(this.label14);
+            this.tabPage3.Controls.Add(this.dtgvTable);
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -482,6 +629,69 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Bàn ăn";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // txbTableStatus
+            // 
+            this.txbTableStatus.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTableStatus.Location = new System.Drawing.Point(495, 84);
+            this.txbTableStatus.Name = "txbTableStatus";
+            this.txbTableStatus.Size = new System.Drawing.Size(207, 33);
+            this.txbTableStatus.TabIndex = 6;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(359, 91);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(97, 26);
+            this.label16.TabIndex = 5;
+            this.label16.Text = "Trạng thái";
+            // 
+            // txbTableName
+            // 
+            this.txbTableName.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTableName.Location = new System.Drawing.Point(495, 45);
+            this.txbTableName.Name = "txbTableName";
+            this.txbTableName.Size = new System.Drawing.Size(207, 33);
+            this.txbTableName.TabIndex = 4;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(359, 52);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(79, 26);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Tên bàn";
+            // 
+            // txbTableID
+            // 
+            this.txbTableID.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTableID.Location = new System.Drawing.Point(495, 6);
+            this.txbTableID.Name = "txbTableID";
+            this.txbTableID.Size = new System.Drawing.Size(207, 33);
+            this.txbTableID.TabIndex = 2;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(359, 13);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(31, 26);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "ID";
+            // 
+            // dtgvTable
+            // 
+            this.dtgvTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvTable.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dtgvTable.Location = new System.Drawing.Point(3, 3);
+            this.dtgvTable.Name = "dtgvTable";
+            this.dtgvTable.Size = new System.Drawing.Size(350, 623);
+            this.dtgvTable.TabIndex = 0;
             // 
             // tabPage4
             // 
@@ -496,6 +706,12 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnExportReport);
+            this.groupBox3.Controls.Add(this.btnViewReport);
+            this.groupBox3.Controls.Add(this.dtpkReportTo);
+            this.groupBox3.Controls.Add(this.dtpkReportFrom);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.dtgvListFoodSold);
             this.groupBox3.Location = new System.Drawing.Point(8, 6);
             this.groupBox3.Name = "groupBox3";
@@ -503,6 +719,69 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Doanh số các món";
+            // 
+            // btnExportReport
+            // 
+            this.btnExportReport.Location = new System.Drawing.Point(804, 92);
+            this.btnExportReport.Name = "btnExportReport";
+            this.btnExportReport.Size = new System.Drawing.Size(150, 59);
+            this.btnExportReport.TabIndex = 10;
+            this.btnExportReport.Text = "Xuất báo cáo";
+            this.btnExportReport.UseVisualStyleBackColor = true;
+            this.btnExportReport.Click += new System.EventHandler(this.btnExportReport_Click);
+            // 
+            // btnViewReport
+            // 
+            this.btnViewReport.Location = new System.Drawing.Point(648, 92);
+            this.btnViewReport.Name = "btnViewReport";
+            this.btnViewReport.Size = new System.Drawing.Size(150, 59);
+            this.btnViewReport.TabIndex = 9;
+            this.btnViewReport.Text = "Xem báo cáo";
+            this.btnViewReport.UseVisualStyleBackColor = true;
+            this.btnViewReport.Click += new System.EventHandler(this.btnViewReport_Click);
+            // 
+            // dtpkReportTo
+            // 
+            this.dtpkReportTo.Location = new System.Drawing.Point(648, 59);
+            this.dtpkReportTo.Name = "dtpkReportTo";
+            this.dtpkReportTo.Size = new System.Drawing.Size(306, 27);
+            this.dtpkReportTo.TabIndex = 8;
+            // 
+            // dtpkReportFrom
+            // 
+            this.dtpkReportFrom.Location = new System.Drawing.Point(648, 26);
+            this.dtpkReportFrom.Name = "dtpkReportFrom";
+            this.dtpkReportFrom.Size = new System.Drawing.Size(306, 27);
+            this.dtpkReportFrom.TabIndex = 7;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(537, 65);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(105, 19);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "Ngày kết thúc";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(537, 32);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(101, 19);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "Ngày bắt đầu";
+            // 
+            // dtgvListFoodSold
+            // 
+            this.dtgvListFoodSold.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvListFoodSold.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dtgvListFoodSold.Location = new System.Drawing.Point(3, 23);
+            this.dtgvListFoodSold.Name = "dtgvListFoodSold";
+            this.dtgvListFoodSold.Size = new System.Drawing.Size(528, 591);
+            this.dtgvListFoodSold.TabIndex = 0;
             // 
             // tabPage5
             // 
@@ -513,135 +792,6 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // dtgvListFoodSold
-            // 
-            this.dtgvListFoodSold.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvListFoodSold.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvListFoodSold.Location = new System.Drawing.Point(3, 23);
-            this.dtgvListFoodSold.Name = "dtgvListFoodSold";
-            this.dtgvListFoodSold.Size = new System.Drawing.Size(954, 591);
-            this.dtgvListFoodSold.TabIndex = 0;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Thành tiền";
-            this.columnHeader4.Width = 123;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.lbBigInvoice);
-            this.groupBox4.Controls.Add(this.lbLeastValue);
-            this.groupBox4.Controls.Add(this.lbMostValue);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.lbInvoice);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.lbRevenue);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(538, 14);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(430, 251);
-            this.groupBox4.TabIndex = 8;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Thông tin";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 23);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(127, 19);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Tổng số hóa đơn:";
-            // 
-            // lbRevenue
-            // 
-            this.lbRevenue.AutoSize = true;
-            this.lbRevenue.Location = new System.Drawing.Point(171, 99);
-            this.lbRevenue.Name = "lbRevenue";
-            this.lbRevenue.Size = new System.Drawing.Size(17, 19);
-            this.lbRevenue.TabIndex = 1;
-            this.lbRevenue.Text = "0";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 99);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 19);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Doanh thu:";
-            // 
-            // lbInvoice
-            // 
-            this.lbInvoice.AutoSize = true;
-            this.lbInvoice.Location = new System.Drawing.Point(171, 25);
-            this.lbInvoice.Name = "lbInvoice";
-            this.lbInvoice.Size = new System.Drawing.Size(17, 19);
-            this.lbInvoice.TabIndex = 3;
-            this.lbInvoice.Text = "0";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 80);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(139, 19);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Hóa đơn lớn nhất: ";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 61);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(143, 19);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Hóa đơn nhỏ nhất: ";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(6, 42);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(161, 19);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "Hóa đơn trên 200.000:";
-            // 
-            // lbMostValue
-            // 
-            this.lbMostValue.AutoSize = true;
-            this.lbMostValue.Location = new System.Drawing.Point(171, 80);
-            this.lbMostValue.Name = "lbMostValue";
-            this.lbMostValue.Size = new System.Drawing.Size(17, 19);
-            this.lbMostValue.TabIndex = 7;
-            this.lbMostValue.Text = "0";
-            // 
-            // lbLeastValue
-            // 
-            this.lbLeastValue.AutoSize = true;
-            this.lbLeastValue.Location = new System.Drawing.Point(171, 61);
-            this.lbLeastValue.Name = "lbLeastValue";
-            this.lbLeastValue.Size = new System.Drawing.Size(17, 19);
-            this.lbLeastValue.TabIndex = 8;
-            this.lbLeastValue.Text = "0";
-            // 
-            // lbBigInvoice
-            // 
-            this.lbBigInvoice.AutoSize = true;
-            this.lbBigInvoice.Location = new System.Drawing.Point(171, 42);
-            this.lbBigInvoice.Name = "lbBigInvoice";
-            this.lbBigInvoice.Size = new System.Drawing.Size(17, 19);
-            this.lbBigInvoice.TabIndex = 9;
-            this.lbBigInvoice.Text = "0";
             // 
             // fmManagement
             // 
@@ -654,9 +804,12 @@
             this.Name = "fmManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmManagement";
+            this.Load += new System.EventHandler(this.fmManagement_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -666,11 +819,13 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCategory)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTable)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvListFoodSold)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -731,5 +886,18 @@
         private System.Windows.Forms.Label lbBigInvoice;
         private System.Windows.Forms.Label lbLeastValue;
         private System.Windows.Forms.Label lbMostValue;
+        private System.Windows.Forms.DataGridView dtgvTable;
+        private System.Windows.Forms.TextBox txbTableStatus;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txbTableName;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txbTableID;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnExportReport;
+        private System.Windows.Forms.Button btnViewReport;
+        private System.Windows.Forms.DateTimePicker dtpkReportTo;
+        private System.Windows.Forms.DateTimePicker dtpkReportFrom;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }

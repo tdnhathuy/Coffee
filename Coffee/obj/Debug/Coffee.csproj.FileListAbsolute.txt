@@ -93,3 +93,7 @@ C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\zh-CHT\Microsoft.Repor
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.exe.config
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.csproj.CopyComplete
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.fmManagement.resources
+C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\EntityFramework.SqlServer.xml

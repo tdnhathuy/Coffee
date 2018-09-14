@@ -27,7 +27,7 @@ namespace Coffee
         {
             switch ((sender as TabControl).SelectedIndex)
             {
-                case 0: break;
+                case 0: Tab0(); break;
                 case 1: Tab1(); break;
                 case 2: Tab2(); break;
                 case 3: Tab3(); break;
@@ -53,7 +53,6 @@ namespace Coffee
         private void Statistical(DateTime checkIn, DateTime checkOut)
         {
             //Tổng số hóa đơn
-
             lbInvoice.Text = BillDAO.Instance.GetAllInvoice(checkIn, checkOut).ToString();
 
             //Hóa đơn lớn nhất
@@ -73,13 +72,9 @@ namespace Coffee
         {
             dtgvCategory.DataSource = listCategory;
             dtgvFood.DataSource = listFood;
-            //dtgvListTable.DataSource = listTable;
 
             listCategory.DataSource = CategoryDAO.Instance.LoadCategory();
             listFood.DataSource = FoodDAO.Instance.LoadFood();
-            //listTable.DataSource = TableDAO.Instance.LoadTable();
-
-
 
             txbCateID.DataBindings.Add(new Binding("Text", dtgvCategory.DataSource, "ID", true, DataSourceUpdateMode.Never));
             txbCateName.DataBindings.Add(new Binding("Text", dtgvCategory.DataSource, "Tên", true, DataSourceUpdateMode.Never));
@@ -88,12 +83,6 @@ namespace Coffee
             txbFoodName.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Tên", true, DataSourceUpdateMode.Never));
             cbbFoodCate.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Danh mục", true, DataSourceUpdateMode.Never));
             nbuFoodPrice.DataBindings.Add(new Binding("Value", dtgvFood.DataSource, "Giá", true, DataSourceUpdateMode.Never));
-
-            /*
-            txbIDTable.DataBindings.Add(new Binding("Text", dtgvListTable.DataSource, "ID", true, DataSourceUpdateMode.Never));
-            txbNameTable.DataBindings.Add(new Binding("Text", dtgvListTable.DataSource, "Tên bàn", true, DataSourceUpdateMode.Never));
-            txbStatusTable.DataBindings.Add(new Binding("Text", dtgvListTable.DataSource, "Trạng thái", true, DataSourceUpdateMode.Never));
-            */
 
             dtgvCategory.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dtgvCategory.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -107,6 +96,15 @@ namespace Coffee
 
         #region Events
         private void btnShowBill_Click(object sender, EventArgs e)
+        {
+            LoadBill(dtpkFromDate.Value, dtpkToDate.Value);
+            Statistical(dtpkFromDate.Value, dtpkToDate.Value);
+
+            txbBillID.DataBindings.Clear();
+            txbBillID.DataBindings.Add(new Binding("Text", dtgvBill.DataSource, "Số Hóa Đơn"));
+        }
+
+        private void fmManagement_Load(object sender, EventArgs e)
         {
             LoadBill(dtpkFromDate.Value, dtpkToDate.Value);
             Statistical(dtpkFromDate.Value, dtpkToDate.Value);
@@ -159,20 +157,47 @@ namespace Coffee
             dtgvCategory.DataSource = CategoryDAO.Instance.LoadCategory();
             dtgvFood.DataSource = FoodDAO.Instance.LoadFood();
         }
-        void Tab2() { }
+        void Tab2()
+        {
+            dtgvTable.DataSource = TableDAO.Instance.LoadTable();
+            dtgvTable.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dtgvTable.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dtgvTable.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            txbTableID.DataBindings.Clear();
+            txbTableName.DataBindings.Clear();
+            txbTableStatus.DataBindings.Clear();
+
+            txbTableID.DataBindings.Add(new Binding("Text", dtgvTable.DataSource, "ID", true, DataSourceUpdateMode.Never));
+            txbTableName.DataBindings.Add(new Binding("Text", dtgvTable.DataSource, "Tên bàn", true, DataSourceUpdateMode.Never));
+            txbTableStatus.DataBindings.Add(new Binding("Text", dtgvTable.DataSource, "Trạng thái", true, DataSourceUpdateMode.Never));
+        }
         void Tab3()
         {
-            string qr = "" +
-                "SELECT c.name as [Tên món], SUM(b.count) as [Số lượng bán], FORMAT(c.price, '#,### VNĐ') as [Đơn giá], FORMAT(SUM(b.count) * c.price, '#,### VNĐ') as [Tổng tiền] " +
-                "FROM Bill a, BillInfo b, Food c " +
-                "WHERE a.id = b.idBill AND b.idFood = c.id " +
-                "GROUP BY c.name, c.price";
-            dtgvListFoodSold.DataSource = DataProvider.Instance.ExecuteQuery(qr);
+            dtgvListFoodSold.DataSource = FoodDAO.Instance.GetListFoodSold(dtpkReportFrom.Value, dtpkReportTo.Value);
+
+            dtgvListFoodSold.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvListFoodSold.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dtgvListFoodSold.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dtgvListFoodSold.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
         }
         void Tab4() { }
 
 
-
         #endregion
+
+        private void btnViewReport_Click(object sender, EventArgs e)
+        {
+            dtgvListFoodSold.DataSource = FoodDAO.Instance.GetListFoodSold(dtpkReportFrom.Value, dtpkReportTo.Value);
+
+            dtgvListFoodSold.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvListFoodSold.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dtgvListFoodSold.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dtgvListFoodSold.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+        }
+
+        private void btnExportReport_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
