@@ -198,6 +198,8 @@ namespace Coffee
 
         private void btnExportReport_Click(object sender, EventArgs e)
         {
+            fmReport fm = new fmReport();
+            fm.ShowDialog();
         }
     }
 }

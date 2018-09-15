@@ -73,11 +73,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CoffeeDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CoffeeDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\BillInfoDAO.cs" />
@@ -105,6 +100,12 @@
     <Compile Include="fmManagement.Designer.cs">
       <DependentUpon>fmManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="fmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmReport.Designer.cs">
+      <DependentUpon>fmReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -113,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fmManagement.resx">
       <DependentUpon>fmManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmReport.resx">
+      <DependentUpon>fmReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -123,22 +127,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="CoffeeDataSet.xsc">
-      <DependentUpon>CoffeeDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CoffeeDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CoffeeDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CoffeeDataSet.xss">
-      <DependentUpon>CoffeeDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\fmMain.datasource" />
     <None Include="Properties\DataSources\fmManagement.datasource" />
     <None Include="Properties\DataSources\fmReport.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\USP_Report_Result.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CoffeeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CoffeeReportEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="USP_Report" ReturnType="Collection(CoffeeModel.USP_Report_Result)">
+      <Parameter Name="dateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="USP_Report_Result">
+    <Property Type="String" Name="Tên_món" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="Số_lượng_bán" Nullable="true" />
+    <Property Type="String" Name="Đơn_giá" Nullable="true" MaxLength="4000" />
+    <Property Type="String" Name="Tổng_tiền" Nullable="true" MaxLength="4000" />
+  </ComplexType>
+</Schema>
