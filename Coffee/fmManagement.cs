@@ -33,7 +33,7 @@ namespace Coffee
                 case 3: Tab3(); break;
                 case 4: Tab4(); break;
             }
-            try { AddBindingData(); } catch (Exception ex) { }
+            try { AddBindingData(); } catch (Exception) { }
         }
 
 
@@ -198,7 +198,7 @@ namespace Coffee
 
         private void btnExportReport_Click(object sender, EventArgs e)
         {
-            fmReport fm = new fmReport();
+            fmReport fm = new fmReport(dtpkReportFrom.Value, dtpkReportTo.Value);
             fm.ShowDialog();
         }
     }
