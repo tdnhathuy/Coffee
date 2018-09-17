@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,6 +39,12 @@ namespace Coffee
             this.USP_ReportTableAdapter.Fill(this.CoffeeDataSet.USP_Report, dateFrom, dateTo);
             textBox1.Text = dateFrom.ToString();
             textBox2.Text = dateTo.ToString();
+
+            ReportParameter[] pr = new ReportParameter[2];
+            pr[0] = new ReportParameter("DateFrom", textBox1.Text, false);
+            pr[1] = new ReportParameter("DateTo", DateTime.Parse(textBox2.Text).ToShortDateString(), false);
+            this.rpViewer.LocalReport.SetParameters(pr);
+
             this.rpViewer.RefreshReport();
         }
     }

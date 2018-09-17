@@ -30,15 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.rpViewer = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.CoffeeDataSet = new Coffee.CoffeeDataSet();
             this.USP_ReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CoffeeDataSet = new Coffee.CoffeeDataSet();
+            this.rpViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.USP_ReportTableAdapter = new Coffee.CoffeeDataSetTableAdapters.USP_ReportTableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.CoffeeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.USP_ReportBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CoffeeDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // USP_ReportBindingSource
+            // 
+            this.USP_ReportBindingSource.DataMember = "USP_Report";
+            this.USP_ReportBindingSource.DataSource = this.CoffeeDataSet;
+            // 
+            // CoffeeDataSet
+            // 
+            this.CoffeeDataSet.DataSetName = "CoffeeDataSet";
+            this.CoffeeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rpViewer
             // 
@@ -52,16 +62,6 @@
             this.rpViewer.ServerReport.BearerToken = null;
             this.rpViewer.Size = new System.Drawing.Size(834, 400);
             this.rpViewer.TabIndex = 0;
-            // 
-            // CoffeeDataSet
-            // 
-            this.CoffeeDataSet.DataSetName = "CoffeeDataSet";
-            this.CoffeeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // USP_ReportBindingSource
-            // 
-            this.USP_ReportBindingSource.DataMember = "USP_Report";
-            this.USP_ReportBindingSource.DataSource = this.CoffeeDataSet;
             // 
             // USP_ReportTableAdapter
             // 
@@ -93,8 +93,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmReport";
             this.Load += new System.EventHandler(this.fmReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CoffeeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.USP_ReportBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CoffeeDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
