@@ -44,9 +44,9 @@ namespace DAO
             DataProvider.Instance.ExecuteNonQuery(qr);
         }
 
-        public void DeleteTable(string name)
+        public void DeleteTable(int id)
         {
-            DataProvider.Instance.ExecuteNonQuery("DELETE TableFood WHERE name = '" + name + "'");
+            DataProvider.Instance.ExecuteNonQuery("DELETE TableFood WHERE id = '" + id + "'");
         }
 
         public void UpdateTable(int id, string name, string status)

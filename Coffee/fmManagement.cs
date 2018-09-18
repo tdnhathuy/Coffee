@@ -1,12 +1,6 @@
 ﻿using DAO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Coffee
@@ -35,7 +29,6 @@ namespace Coffee
             }
             try { AddBindingData(); } catch (Exception) { }
         }
-
 
         #region Methods
         private void LoadBill(DateTime checkIn, DateTime checkOut)
@@ -301,6 +294,59 @@ namespace Coffee
                     }
                 }
         }
+
+        //Table
+        private void btnTableAdd_Click(object sender, EventArgs e)
+        {
+            if (txbTableID.Enabled == false && txbTableName.Enabled == false && txbTableStatus.Enabled == false)
+            {
+                txbTableName.Enabled = true;
+                txbTableStatus.Enabled = true;
+            }
+            else
+            {
+                TableDAO.Instance.AddTable(txbTableName.Text, txbTableStatus.Text);
+                txbTableName.Enabled = false;
+                txbTableStatus.Enabled = false;
+                Tab2();
+            }
+        }
+        private void btnTableEdit_Click(object sender, EventArgs e)
+        {
+            if (txbTableID.Enabled == false && txbTableName.Enabled == false && txbTableStatus.Enabled == false)
+            {
+                txbTableName.Enabled = true;
+                txbTableStatus.Enabled = true;
+            }
+            else
+            {
+                TableDAO.Instance.UpdateTable(Convert.ToInt32(txbTableID.Text), txbTableName.Text, txbTableStatus.Text);
+                txbTableName.Enabled = false;
+                txbTableStatus.Enabled = false;
+                Tab2();
+                MessageBox.Show("Sửa bàn thành công !!! ","Thông báo");
+            }
+        }
+        private void btnTableDel_Click(object sender, EventArgs e)
+        {
+            if (txbTableID.Enabled == false && txbTableName.Enabled == false && txbTableStatus.Enabled == false)
+                if (MessageBox.Show("Bạn có chắc xóa bàn " + txbTableName.Text, "Xác nhận xóa", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    try
+                    {
+                        TableDAO.Instance.DeleteTable(Convert.ToInt32(txbTableID.Text));
+                        txbTableName.Enabled = false;
+                        txbTableStatus.Enabled = false;
+                        MessageBox.Show("Xóa thành công !", "Thông báo !");
+                        Tab2();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Có lỗi xảy ra !", "Lỗi");
+                    }
+                }
+        }
+
         #region Tab Controls
         void Tab0() { }
         void Tab1()
@@ -335,8 +381,5 @@ namespace Coffee
         }
         void Tab4() { }
         #endregion
-
-
-
     }
 }
