@@ -70,19 +70,22 @@ namespace Coffee
 
         private void AddBindingData()
         {
-            dtgvCategory.DataSource = listCategory;
-            dtgvFood.DataSource = listFood;
+            dtgvCategory.DataSource = CategoryDAO.Instance.LoadCategory();
+            dtgvFood.DataSource = FoodDAO.Instance.LoadFood();
 
-            listCategory.DataSource = CategoryDAO.Instance.LoadCategory();
-            listFood.DataSource = FoodDAO.Instance.LoadFood();
+            txbCateID.DataBindings.Clear();
+            txbCateName.DataBindings.Clear();
 
             txbCateID.DataBindings.Add(new Binding("Text", dtgvCategory.DataSource, "ID", true, DataSourceUpdateMode.Never));
             txbCateName.DataBindings.Add(new Binding("Text", dtgvCategory.DataSource, "Tên", true, DataSourceUpdateMode.Never));
 
+            txbFoodID.DataBindings.Clear();
+            txbFoodName.DataBindings.Clear();
+            cbbFoodCate.DataBindings.Clear();
+
             txbFoodID.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "ID", true, DataSourceUpdateMode.Never));
             txbFoodName.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Tên", true, DataSourceUpdateMode.Never));
             cbbFoodCate.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Danh mục", true, DataSourceUpdateMode.Never));
-            nbuFoodPrice.DataBindings.Add(new Binding("Value", dtgvFood.DataSource, "Giá", true, DataSourceUpdateMode.Never));
 
             dtgvCategory.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dtgvCategory.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -95,15 +98,6 @@ namespace Coffee
         #endregion
 
         #region Events
-        private void btnShowBill_Click(object sender, EventArgs e)
-        {
-            LoadBill(dtpkFromDate.Value, dtpkToDate.Value);
-            Statistical(dtpkFromDate.Value, dtpkToDate.Value);
-
-            txbBillID.DataBindings.Clear();
-            txbBillID.DataBindings.Add(new Binding("Text", dtgvBill.DataSource, "Số Hóa Đơn"));
-        }
-
         private void fmManagement_Load(object sender, EventArgs e)
         {
             LoadBill(dtpkFromDate.Value, dtpkToDate.Value);
@@ -113,16 +107,40 @@ namespace Coffee
             txbBillID.DataBindings.Add(new Binding("Text", dtgvBill.DataSource, "Số Hóa Đơn"));
         }
 
+        private void btnShowBill_Click(object sender, EventArgs e)
+        {
+            LoadBill(dtpkFromDate.Value, dtpkToDate.Value);
+            Statistical(dtpkFromDate.Value, dtpkToDate.Value);
+
+            txbBillID.DataBindings.Clear();
+            txbBillID.DataBindings.Add(new Binding("Text", dtgvBill.DataSource, "Số Hóa Đơn"));
+        }
+
+        //Báo cáo
+        private void btnViewReport_Click(object sender, EventArgs e)
+        {
+            dtgvListFoodSold.DataSource = FoodDAO.Instance.GetListFoodSold(dtpkReportFrom.Value, dtpkReportTo.Value);
+
+            dtgvListFoodSold.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvListFoodSold.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dtgvListFoodSold.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dtgvListFoodSold.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+        }
+        private void btnExportReport_Click(object sender, EventArgs e)
+        {
+            fmReport fm = new fmReport(dtpkReportFrom.Value, dtpkReportTo.Value);
+            fm.ShowDialog();
+        }
+
+        //Tìm kiếm
         private void btnSearch_Click(object sender, EventArgs e)
         {
             listFood.DataSource = FoodDAO.Instance.SearchFoodByName(txbSearch.Text);
         }
-
         private void txbSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             listFood.DataSource = FoodDAO.Instance.SearchFoodByName(txbSearch.Text);
         }
-
         private void txbBillID_TextChanged(object sender, EventArgs e)
         {
             lsvFood.Items.Clear();
@@ -148,14 +166,148 @@ namespace Coffee
             }
         }
 
+        //Disable textbox
+        private void dtgvCategory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txbCateID.Enabled = false;
+            txbCateName.Enabled = false;
+        }
+        private void dtgvFood_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txbFoodID.Enabled = false;
+            txbFoodName.Enabled = false;
+            cbbFoodCate.Enabled = false;
+            nbuFoodPrice.Enabled = false;
+        }
         #endregion
 
+        //Category
+        private void btnCateAdd_Click(object sender, EventArgs e)
+        {
+            if (txbCateID.Enabled == false && txbCateName.Enabled == false)
+            {
+                txbCateName.Enabled = true;
+                return;
+            }
+            else
+            {
+                CategoryDAO.Instance.AddCategory(txbCateName.Text);
+                txbCateID.Enabled = false;
+                txbCateName.Enabled = false;
+                MessageBox.Show("Thêm thành công !", "Thông báo !");
+                Tab1();
+            }
+        }
+        private void btnCateEdit_Click(object sender, EventArgs e)
+        {
+            if (txbCateID.Enabled == false && txbCateName.Enabled == false)
+            {
+                txbCateName.Enabled = true;
+                return;
+            }
+            else
+            {
+                CategoryDAO.Instance.EditCategory(Convert.ToInt32(txbCateID.Text), txbCateName.Text);
+                txbCateID.Enabled = false;
+                txbCateName.Enabled = false;
+                MessageBox.Show("Sửa thành công !", "Thông báo !");
+                Tab1();
+            }
+        }
+        private void btnCateDel_Click(object sender, EventArgs e)
+        {
+            if (txbCateID.Enabled == false && txbCateName.Enabled == false)
+                if (MessageBox.Show("Bạn có chắc xóa danh mục " + txbCateName.Text, "Xác nhận xóa", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    try
+                    {
+                        CategoryDAO.Instance.DeleteCategory(Convert.ToInt32(txbCateID.Text));
+                        txbCateID.Enabled = false;
+                        txbCateName.Enabled = false;
+                        MessageBox.Show("Xóa thành công !", "Thông báo !");
+                        Tab1();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Không thể xóa danh mục này. \nLý do: Còn tồn tại thức ăn thuộc danh mục này.", "Lỗi");
+                    }
+                }
+        }
+        //Food
+        private void btnFoodAdd_Click(object sender, EventArgs e)
+        {
+            if (txbFoodID.Enabled == false && txbFoodName.Enabled == false && cbbFoodCate.Enabled == false && nbuFoodPrice.Enabled == false)
+            {
+                txbFoodName.Enabled = true;
+                nbuFoodPrice.Enabled = true;
+
+                cbbFoodCate.Enabled = true;
+                cbbFoodCate.DataSource = CategoryDAO.Instance.GetListCategory();
+                cbbFoodCate.DisplayMember = "name";
+                return;
+            }
+            else
+            {
+                FoodDAO.Instance.InsertFood(txbFoodName.Text, cbbFoodCate.Text, Convert.ToInt32(nbuFoodPrice.Text));
+                txbFoodID.Enabled = false;
+                txbFoodName.Enabled = false;
+                cbbFoodCate.Enabled = false;
+                nbuFoodPrice.Enabled = false;
+                MessageBox.Show("Thêm thành công !", "Thông báo !");
+                Tab1();
+            }
+        }
+        private void btnFoodEdit_Click(object sender, EventArgs e)
+        {
+            if (txbFoodID.Enabled == false && txbFoodName.Enabled == false && cbbFoodCate.Enabled == false && nbuFoodPrice.Enabled == false)
+            {
+                txbFoodName.Enabled = true;
+                nbuFoodPrice.Enabled = true;
+
+                cbbFoodCate.Enabled = true;
+                cbbFoodCate.DataSource = CategoryDAO.Instance.GetListCategory();
+                cbbFoodCate.DisplayMember = "name";
+                return;
+            }
+            else
+            {
+                FoodDAO.Instance.UpdateFood(txbFoodName.Text, cbbFoodCate.Text, Convert.ToInt32(nbuFoodPrice.Text), Convert.ToInt32(txbFoodID.Text));
+                txbFoodID.Enabled = false;
+                txbFoodName.Enabled = false;
+                cbbFoodCate.Enabled = false;
+                nbuFoodPrice.Enabled = false;
+                MessageBox.Show("Sửa thành công !", "Thông báo !");
+                Tab1();
+            }
+        }
+        private void btnFoodDel_Click(object sender, EventArgs e)
+        {
+            if (txbFoodID.Enabled == false && txbFoodName.Enabled == false && cbbFoodCate.Enabled == false && nbuFoodPrice.Enabled == false)
+                if (MessageBox.Show("Bạn có chắc xóa món " + txbFoodName.Text, "Xác nhận xóa", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    try
+                    {
+                        FoodDAO.Instance.DeleteFood(Convert.ToInt32(txbFoodID.Text));
+                        txbFoodID.Enabled = false;
+                        txbFoodName.Enabled = false;
+                        cbbFoodCate.Enabled = false;
+                        nbuFoodPrice.Enabled = false;
+                        MessageBox.Show("Xóa thành công !", "Thông báo !");
+                        Tab1();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Có lỗi xảy ra !", "Lỗi");
+                    }
+                }
+        }
         #region Tab Controls
         void Tab0() { }
         void Tab1()
         {
             dtgvCategory.DataSource = CategoryDAO.Instance.LoadCategory();
             dtgvFood.DataSource = FoodDAO.Instance.LoadFood();
+            AddBindingData();
         }
         void Tab2()
         {
@@ -182,24 +334,9 @@ namespace Coffee
             dtgvListFoodSold.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
         }
         void Tab4() { }
-
-
         #endregion
 
-        private void btnViewReport_Click(object sender, EventArgs e)
-        {
-            dtgvListFoodSold.DataSource = FoodDAO.Instance.GetListFoodSold(dtpkReportFrom.Value, dtpkReportTo.Value);
 
-            dtgvListFoodSold.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dtgvListFoodSold.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dtgvListFoodSold.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dtgvListFoodSold.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-        }
 
-        private void btnExportReport_Click(object sender, EventArgs e)
-        {
-            fmReport fm = new fmReport(dtpkReportFrom.Value, dtpkReportTo.Value);
-            fm.ShowDialog();
-        }
     }
 }

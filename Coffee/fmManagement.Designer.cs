@@ -64,18 +64,18 @@
             this.txbFoodName = new System.Windows.Forms.TextBox();
             this.txbFoodID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnFoodDel = new System.Windows.Forms.Button();
+            this.btnFoodEdit = new System.Windows.Forms.Button();
+            this.btnFoodAdd = new System.Windows.Forms.Button();
             this.dtgvFood = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txbCateName = new System.Windows.Forms.TextBox();
             this.txbCateID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCateDel = new System.Windows.Forms.Button();
+            this.btnCateEdit = new System.Windows.Forms.Button();
+            this.btnCateAdd = new System.Windows.Forms.Button();
             this.dtgvCategory = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.txbTableStatus = new System.Windows.Forms.TextBox();
@@ -381,9 +381,9 @@
             this.groupBox2.Controls.Add(this.txbFoodName);
             this.groupBox2.Controls.Add(this.txbFoodID);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.Controls.Add(this.btnFoodDel);
+            this.groupBox2.Controls.Add(this.btnFoodEdit);
+            this.groupBox2.Controls.Add(this.btnFoodAdd);
             this.groupBox2.Controls.Add(this.dtgvFood);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox2.Location = new System.Drawing.Point(361, 3);
@@ -395,6 +395,7 @@
             // 
             // nbuFoodPrice
             // 
+            this.nbuFoodPrice.Enabled = false;
             this.nbuFoodPrice.Increment = new decimal(new int[] {
             1000,
             0,
@@ -407,7 +408,6 @@
             0,
             0});
             this.nbuFoodPrice.Name = "nbuFoodPrice";
-            this.nbuFoodPrice.ReadOnly = true;
             this.nbuFoodPrice.Size = new System.Drawing.Size(251, 27);
             this.nbuFoodPrice.TabIndex = 18;
             // 
@@ -431,6 +431,7 @@
             // 
             // cbbFoodCate
             // 
+            this.cbbFoodCate.Enabled = false;
             this.cbbFoodCate.FormattingEnabled = true;
             this.cbbFoodCate.Location = new System.Drawing.Point(355, 92);
             this.cbbFoodCate.Name = "cbbFoodCate";
@@ -466,17 +467,17 @@
             // 
             // txbFoodName
             // 
+            this.txbFoodName.Enabled = false;
             this.txbFoodName.Location = new System.Drawing.Point(355, 59);
             this.txbFoodName.Name = "txbFoodName";
-            this.txbFoodName.ReadOnly = true;
             this.txbFoodName.Size = new System.Drawing.Size(251, 27);
             this.txbFoodName.TabIndex = 9;
             // 
             // txbFoodID
             // 
+            this.txbFoodID.Enabled = false;
             this.txbFoodID.Location = new System.Drawing.Point(355, 26);
             this.txbFoodID.Name = "txbFoodID";
-            this.txbFoodID.ReadOnly = true;
             this.txbFoodID.Size = new System.Drawing.Size(251, 27);
             this.txbFoodID.TabIndex = 8;
             // 
@@ -489,32 +490,35 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "ID";
             // 
-            // button4
+            // btnFoodDel
             // 
-            this.button4.Location = new System.Drawing.Point(178, 26);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 30);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Xóa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnFoodDel.Location = new System.Drawing.Point(178, 26);
+            this.btnFoodDel.Name = "btnFoodDel";
+            this.btnFoodDel.Size = new System.Drawing.Size(80, 30);
+            this.btnFoodDel.TabIndex = 6;
+            this.btnFoodDel.Text = "Xóa";
+            this.btnFoodDel.UseVisualStyleBackColor = true;
+            this.btnFoodDel.Click += new System.EventHandler(this.btnFoodDel_Click);
             // 
-            // button5
+            // btnFoodEdit
             // 
-            this.button5.Location = new System.Drawing.Point(92, 26);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(80, 30);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Sửa";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnFoodEdit.Location = new System.Drawing.Point(92, 26);
+            this.btnFoodEdit.Name = "btnFoodEdit";
+            this.btnFoodEdit.Size = new System.Drawing.Size(80, 30);
+            this.btnFoodEdit.TabIndex = 5;
+            this.btnFoodEdit.Text = "Sửa";
+            this.btnFoodEdit.UseVisualStyleBackColor = true;
+            this.btnFoodEdit.Click += new System.EventHandler(this.btnFoodEdit_Click);
             // 
-            // button6
+            // btnFoodAdd
             // 
-            this.button6.Location = new System.Drawing.Point(6, 26);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(80, 30);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Thêm";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnFoodAdd.Location = new System.Drawing.Point(6, 26);
+            this.btnFoodAdd.Name = "btnFoodAdd";
+            this.btnFoodAdd.Size = new System.Drawing.Size(80, 30);
+            this.btnFoodAdd.TabIndex = 4;
+            this.btnFoodAdd.Text = "Thêm";
+            this.btnFoodAdd.UseVisualStyleBackColor = true;
+            this.btnFoodAdd.Click += new System.EventHandler(this.btnFoodAdd_Click);
             // 
             // dtgvFood
             // 
@@ -524,6 +528,7 @@
             this.dtgvFood.Name = "dtgvFood";
             this.dtgvFood.Size = new System.Drawing.Size(606, 462);
             this.dtgvFood.TabIndex = 1;
+            this.dtgvFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvFood_CellClick);
             // 
             // groupBox1
             // 
@@ -531,9 +536,9 @@
             this.groupBox1.Controls.Add(this.txbCateName);
             this.groupBox1.Controls.Add(this.txbCateID);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnCateDel);
+            this.groupBox1.Controls.Add(this.btnCateEdit);
+            this.groupBox1.Controls.Add(this.btnCateAdd);
             this.groupBox1.Controls.Add(this.dtgvCategory);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
@@ -554,17 +559,17 @@
             // 
             // txbCateName
             // 
+            this.txbCateName.Enabled = false;
             this.txbCateName.Location = new System.Drawing.Point(44, 96);
             this.txbCateName.Name = "txbCateName";
-            this.txbCateName.ReadOnly = true;
             this.txbCateName.Size = new System.Drawing.Size(302, 27);
             this.txbCateName.TabIndex = 15;
             // 
             // txbCateID
             // 
+            this.txbCateID.Enabled = false;
             this.txbCateID.Location = new System.Drawing.Point(44, 63);
             this.txbCateID.Name = "txbCateID";
-            this.txbCateID.ReadOnly = true;
             this.txbCateID.Size = new System.Drawing.Size(302, 27);
             this.txbCateID.TabIndex = 14;
             // 
@@ -577,32 +582,35 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "ID";
             // 
-            // button3
+            // btnCateDel
             // 
-            this.button3.Location = new System.Drawing.Point(226, 23);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(80, 30);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Xóa";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCateDel.Location = new System.Drawing.Point(226, 23);
+            this.btnCateDel.Name = "btnCateDel";
+            this.btnCateDel.Size = new System.Drawing.Size(80, 30);
+            this.btnCateDel.TabIndex = 3;
+            this.btnCateDel.Text = "Xóa";
+            this.btnCateDel.UseVisualStyleBackColor = true;
+            this.btnCateDel.Click += new System.EventHandler(this.btnCateDel_Click);
             // 
-            // button2
+            // btnCateEdit
             // 
-            this.button2.Location = new System.Drawing.Point(140, 23);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 30);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Sửa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCateEdit.Location = new System.Drawing.Point(140, 23);
+            this.btnCateEdit.Name = "btnCateEdit";
+            this.btnCateEdit.Size = new System.Drawing.Size(80, 30);
+            this.btnCateEdit.TabIndex = 2;
+            this.btnCateEdit.Text = "Sửa";
+            this.btnCateEdit.UseVisualStyleBackColor = true;
+            this.btnCateEdit.Click += new System.EventHandler(this.btnCateEdit_Click);
             // 
-            // button1
+            // btnCateAdd
             // 
-            this.button1.Location = new System.Drawing.Point(54, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 30);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCateAdd.Location = new System.Drawing.Point(54, 23);
+            this.btnCateAdd.Name = "btnCateAdd";
+            this.btnCateAdd.Size = new System.Drawing.Size(80, 30);
+            this.btnCateAdd.TabIndex = 1;
+            this.btnCateAdd.Text = "Thêm";
+            this.btnCateAdd.UseVisualStyleBackColor = true;
+            this.btnCateAdd.Click += new System.EventHandler(this.btnCateAdd_Click);
             // 
             // dtgvCategory
             // 
@@ -612,6 +620,7 @@
             this.dtgvCategory.Name = "dtgvCategory";
             this.dtgvCategory.Size = new System.Drawing.Size(346, 462);
             this.dtgvCategory.TabIndex = 0;
+            this.dtgvCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvCategory_CellClick);
             // 
             // tabPage3
             // 
@@ -842,14 +851,14 @@
         private System.Windows.Forms.Button btnShowBill;
         private System.Windows.Forms.DataGridView dtgvBill;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnFoodDel;
+        private System.Windows.Forms.Button btnFoodEdit;
+        private System.Windows.Forms.Button btnFoodAdd;
         private System.Windows.Forms.DataGridView dtgvFood;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCateDel;
+        private System.Windows.Forms.Button btnCateEdit;
+        private System.Windows.Forms.Button btnCateAdd;
         private System.Windows.Forms.DataGridView dtgvCategory;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
