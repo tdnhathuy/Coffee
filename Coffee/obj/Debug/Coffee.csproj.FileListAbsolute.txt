@@ -40,7 +40,6 @@ C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\Microsoft.VisualStudio
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\VSLangProj80.dll
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
-C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.dll
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\System.Threading.Tasks.Dataflow.dll
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
@@ -98,3 +97,4 @@ C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\EntityFramework.SqlSer
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\EntityFramework.xml
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.fmReport.resources
+C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.fmLogin.resources

@@ -196,5 +196,10 @@ namespace Coffee
 
             ShowBill(table.ID);
         }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

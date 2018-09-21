@@ -1,4 +1,6 @@
-﻿using System.Data;
+﻿using DAO;
+using DTO;
+using System.Data;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -33,13 +35,13 @@ namespace DAO
             string query = "USP_Login @userName , @passWord";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, hasPass /*list*/});
-            
+
             return result.Rows.Count > 0;
         }
 
         public bool UpdateAccount(string userName, string displayName, string pass, string newPass)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAccount @userName , @displayName , @password , @newPassword", new object[]{userName, displayName, pass, newPass});
+            int result = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAccount @userName , @displayName , @password , @newPassword", new object[] { userName, displayName, pass, newPass });
 
             return result > 0;
         }
@@ -49,8 +51,7 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery("SELECT UserName, DisplayName, Type FROM dbo.Account");
         }
 
-        /*
-        public Account GetAccountByUserName(string userName)
+        public DTO.Account GetAccountByUserName(string userName)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("Select * from account where userName = '" + userName + "'");
 
@@ -61,7 +62,6 @@ namespace DAO
 
             return null;
         }
-        */
 
         public bool InsertAccount(string name, string displayName, int type)
         {
