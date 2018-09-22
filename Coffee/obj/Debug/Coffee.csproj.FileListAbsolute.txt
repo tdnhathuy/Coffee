@@ -8,10 +8,6 @@ C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.csproj.Generate
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.exe
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.pdb
-C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\Microsoft.ReportViewer.Common.dll
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\Microsoft.ReportViewer.Design.dll
