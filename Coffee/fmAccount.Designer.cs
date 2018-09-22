@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.dtgvAccount = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.txbPassword = new System.Windows.Forms.TextBox();
+            this.txbDisplayname = new System.Windows.Forms.TextBox();
+            this.btnAcountAdd = new System.Windows.Forms.Button();
+            this.btnAccountEdit = new System.Windows.Forms.Button();
+            this.btnAccountDel = new System.Windows.Forms.Button();
+            this.rdbStaff = new System.Windows.Forms.RadioButton();
+            this.rdbManager = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,17 +47,21 @@
             // 
             this.dtgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvAccount.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtgvAccount.Location = new System.Drawing.Point(0, 129);
+            this.dtgvAccount.Location = new System.Drawing.Point(0, 168);
             this.dtgvAccount.Name = "dtgvAccount";
-            this.dtgvAccount.Size = new System.Drawing.Size(584, 232);
+            this.dtgvAccount.ReadOnly = true;
+            this.dtgvAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvAccount.Size = new System.Drawing.Size(584, 243);
             this.dtgvAccount.TabIndex = 0;
+            this.dtgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvAccount_CellClick);
             // 
-            // textBox1
+            // txbUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(146, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 33);
-            this.textBox1.TabIndex = 1;
+            this.txbUsername.Enabled = false;
+            this.txbUsername.Location = new System.Drawing.Point(150, 12);
+            this.txbUsername.Name = "txbUsername";
+            this.txbUsername.Size = new System.Drawing.Size(296, 33);
+            this.txbUsername.TabIndex = 1;
             // 
             // label1
             // 
@@ -84,65 +90,97 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Tên hiển thị";
             // 
-            // textBox2
+            // txbPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(146, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(300, 33);
-            this.textBox2.TabIndex = 5;
+            this.txbPassword.Enabled = false;
+            this.txbPassword.Location = new System.Drawing.Point(150, 51);
+            this.txbPassword.Name = "txbPassword";
+            this.txbPassword.Size = new System.Drawing.Size(296, 33);
+            this.txbPassword.TabIndex = 5;
             // 
-            // textBox3
+            // txbDisplayname
             // 
-            this.textBox3.Location = new System.Drawing.Point(146, 90);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(300, 33);
-            this.textBox3.TabIndex = 6;
+            this.txbDisplayname.Enabled = false;
+            this.txbDisplayname.Location = new System.Drawing.Point(150, 90);
+            this.txbDisplayname.Name = "txbDisplayname";
+            this.txbDisplayname.Size = new System.Drawing.Size(296, 33);
+            this.txbDisplayname.TabIndex = 6;
             // 
-            // button1
+            // btnAcountAdd
             // 
-            this.button1.Location = new System.Drawing.Point(452, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 33);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAcountAdd.Location = new System.Drawing.Point(452, 12);
+            this.btnAcountAdd.Name = "btnAcountAdd";
+            this.btnAcountAdd.Size = new System.Drawing.Size(120, 33);
+            this.btnAcountAdd.TabIndex = 7;
+            this.btnAcountAdd.Text = "Thêm";
+            this.btnAcountAdd.UseVisualStyleBackColor = true;
+            this.btnAcountAdd.Click += new System.EventHandler(this.btnAcountAdd_Click);
             // 
-            // button2
+            // btnAccountEdit
             // 
-            this.button2.Location = new System.Drawing.Point(452, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 33);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Sửa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAccountEdit.Location = new System.Drawing.Point(452, 51);
+            this.btnAccountEdit.Name = "btnAccountEdit";
+            this.btnAccountEdit.Size = new System.Drawing.Size(120, 33);
+            this.btnAccountEdit.TabIndex = 8;
+            this.btnAccountEdit.Text = "Sửa";
+            this.btnAccountEdit.UseVisualStyleBackColor = true;
+            this.btnAccountEdit.Click += new System.EventHandler(this.btnAccountEdit_Click);
             // 
-            // button3
+            // btnAccountDel
             // 
-            this.button3.Location = new System.Drawing.Point(452, 90);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 33);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Xóa";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAccountDel.Location = new System.Drawing.Point(452, 90);
+            this.btnAccountDel.Name = "btnAccountDel";
+            this.btnAccountDel.Size = new System.Drawing.Size(120, 33);
+            this.btnAccountDel.TabIndex = 9;
+            this.btnAccountDel.Text = "Xóa";
+            this.btnAccountDel.UseVisualStyleBackColor = true;
+            this.btnAccountDel.Click += new System.EventHandler(this.btnAccountDel_Click);
+            // 
+            // rdbStaff
+            // 
+            this.rdbStaff.AutoSize = true;
+            this.rdbStaff.Enabled = false;
+            this.rdbStaff.Location = new System.Drawing.Point(252, 132);
+            this.rdbStaff.Name = "rdbStaff";
+            this.rdbStaff.Size = new System.Drawing.Size(116, 30);
+            this.rdbStaff.TabIndex = 11;
+            this.rdbStaff.TabStop = true;
+            this.rdbStaff.Text = "Nhân viên";
+            this.rdbStaff.UseVisualStyleBackColor = true;
+            // 
+            // rdbManager
+            // 
+            this.rdbManager.AutoSize = true;
+            this.rdbManager.Enabled = false;
+            this.rdbManager.Location = new System.Drawing.Point(150, 132);
+            this.rdbManager.Name = "rdbManager";
+            this.rdbManager.Size = new System.Drawing.Size(96, 30);
+            this.rdbManager.TabIndex = 12;
+            this.rdbManager.TabStop = true;
+            this.rdbManager.Text = "Quản lý";
+            this.rdbManager.UseVisualStyleBackColor = true;
             // 
             // fmAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 361);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(584, 411);
+            this.Controls.Add(this.rdbManager);
+            this.Controls.Add(this.rdbStaff);
+            this.Controls.Add(this.btnAccountDel);
+            this.Controls.Add(this.btnAccountEdit);
+            this.Controls.Add(this.btnAcountAdd);
+            this.Controls.Add(this.txbDisplayname);
+            this.Controls.Add(this.txbPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbUsername);
             this.Controls.Add(this.dtgvAccount);
             this.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "fmAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin các tài khoản";
             this.Load += new System.EventHandler(this.fmAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
@@ -154,14 +192,16 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dtgvAccount;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbUsername;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txbPassword;
+        private System.Windows.Forms.TextBox txbDisplayname;
+        private System.Windows.Forms.Button btnAcountAdd;
+        private System.Windows.Forms.Button btnAccountEdit;
+        private System.Windows.Forms.Button btnAccountDel;
+        private System.Windows.Forms.RadioButton rdbStaff;
+        private System.Windows.Forms.RadioButton rdbManager;
     }
 }

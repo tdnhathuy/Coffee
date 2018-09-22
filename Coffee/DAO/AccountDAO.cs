@@ -18,7 +18,7 @@ namespace DAO
 
         private AccountDAO() { }
 
-        public bool Login(string userName, string passWord)
+        public string CryptoPassword(string passWord)
         {
             byte[] temp = ASCIIEncoding.ASCII.GetBytes(passWord);
             byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
@@ -29,29 +29,41 @@ namespace DAO
             {
                 hasPass += item;
             }
-            //var list = hasData.ToString();
-            //list.Reverse();
+            return hasPass;
+        }
 
+        public bool Login(string userName, string passWord)
+        {
             string query = "USP_Login @userName , @passWord";
 
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, hasPass /*list*/});
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, CryptoPassword(passWord)});
 
             return result.Rows.Count > 0;
         }
 
-        public bool UpdateAccount(string userName, string displayName, string pass, string newPass)
+        public bool UpdateAccount(string userName, string displayName, string passWord)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAccount @userName , @displayName , @password , @newPassword", new object[] { userName, displayName, pass, newPass });
+            string qr = string.Format("" +
+                "UPDATE Account " +
+                "SET Displayname = N'{0}', Password = N'{1}' " +
+                "WHERE Username = N'{2}' ", displayName, CryptoPassword(passWord), userName);
+
+            int result = DataProvider.Instance.ExecuteNonQuery(qr);
 
             return result > 0;
         }
 
         public DataTable GetListAccount()
         {
-            return DataProvider.Instance.ExecuteQuery("SELECT UserName, DisplayName, Type FROM dbo.Account");
+            string qr = "SELECT Account.UserName as [Tài khoản], Account.DisplayName as [Tên hiển thị], " +
+                "(CASE Account.Type " +
+                "WHEN '01' THEN N'Quản lý' " +
+                "ELSE N'Nhân viên'END) AS[Loại tài khoản] " +
+                "FROM Account ";
+            return DataProvider.Instance.ExecuteQuery(qr);
         }
 
-        public DTO.Account GetAccountByUserName(string userName)
+        public Account GetAccountByUserName(string userName)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("Select * from account where userName = '" + userName + "'");
 
@@ -63,9 +75,10 @@ namespace DAO
             return null;
         }
 
-        public bool InsertAccount(string name, string displayName, int type)
+        public bool InsertAccount(string name, string displayName,string passWord, int type)
         {
-            string query = string.Format("INSERT dbo.Account ( UserName, DisplayName, Type, password )VALUES  ( N'{0}', N'{1}', {2}, N'{3}')", name, displayName, type, "1962026656160185351301320480154111117132155");
+
+            string query = string.Format("INSERT dbo.Account ( UserName, DisplayName, Type, password )VALUES  ( N'{0}', N'{1}', {2}, N'{3}')", name, displayName, type, CryptoPassword(passWord));
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
@@ -87,12 +100,5 @@ namespace DAO
             return result > 0;
         }
 
-        public bool ResetPassword(string name)
-        {
-            string query = string.Format("update account set password = N'1962026656160185351301320480154111117132155' where UserName = N'{0}'", name);
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
-
-            return result > 0;
-        }
     }
 }
