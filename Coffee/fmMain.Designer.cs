@@ -56,12 +56,11 @@
             // pnTable
             // 
             this.pnTable.AutoScroll = true;
-            this.pnTable.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pnTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnTable.Location = new System.Drawing.Point(0, 0);
+            this.pnTable.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnTable.Location = new System.Drawing.Point(13, 0);
             this.pnTable.Margin = new System.Windows.Forms.Padding(4);
             this.pnTable.Name = "pnTable";
-            this.pnTable.Size = new System.Drawing.Size(342, 584);
+            this.pnTable.Size = new System.Drawing.Size(348, 580);
             this.pnTable.TabIndex = 0;
             // 
             // btnCheckOut
@@ -69,7 +68,7 @@
             this.btnCheckOut.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckOut.Location = new System.Drawing.Point(7, 510);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(484, 62);
+            this.btnCheckOut.Size = new System.Drawing.Size(465, 62);
             this.btnCheckOut.TabIndex = 5;
             this.btnCheckOut.Text = "Tính tiền";
             this.btnCheckOut.UseVisualStyleBackColor = true;
@@ -81,7 +80,7 @@
             this.txbTotalPrice.Location = new System.Drawing.Point(7, 438);
             this.txbTotalPrice.Name = "txbTotalPrice";
             this.txbTotalPrice.ReadOnly = true;
-            this.txbTotalPrice.Size = new System.Drawing.Size(484, 66);
+            this.txbTotalPrice.Size = new System.Drawing.Size(465, 66);
             this.txbTotalPrice.TabIndex = 6;
             // 
             // menuStrip1
@@ -108,14 +107,14 @@
             // cửaHàngToolStripMenuItem
             // 
             this.cửaHàngToolStripMenuItem.Name = "cửaHàngToolStripMenuItem";
-            this.cửaHàngToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.cửaHàngToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.cửaHàngToolStripMenuItem.Text = "Cửa hàng";
             this.cửaHàngToolStripMenuItem.Click += new System.EventHandler(this.cửaHàngToolStripMenuItem_Click);
             // 
             // nhânViênToolStripMenuItem
             // 
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
             this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
@@ -128,20 +127,22 @@
             // pnCate
             // 
             this.pnCate.AutoScroll = true;
-            this.pnCate.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pnCate.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnCate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnCate.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnCate.Location = new System.Drawing.Point(0, 0);
             this.pnCate.Name = "pnCate";
-            this.pnCate.Size = new System.Drawing.Size(395, 173);
+            this.pnCate.Size = new System.Drawing.Size(383, 173);
             this.pnCate.TabIndex = 9;
             // 
             // pnFood
             // 
             this.pnFood.AutoScroll = true;
-            this.pnFood.BackColor = System.Drawing.Color.LightSlateGray;
+            this.pnFood.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnFood.Location = new System.Drawing.Point(0, 172);
             this.pnFood.Name = "pnFood";
-            this.pnFood.Size = new System.Drawing.Size(395, 412);
+            this.pnFood.Size = new System.Drawing.Size(383, 409);
             this.pnFood.TabIndex = 10;
             // 
             // panel1
@@ -150,7 +151,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(342, 584);
+            this.panel1.Size = new System.Drawing.Size(365, 584);
             this.panel1.TabIndex = 11;
             // 
             // panel3
@@ -165,15 +166,14 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel4.BackColor = System.Drawing.Color.SteelBlue;
             this.panel4.Controls.Add(this.lbTableName);
             this.panel4.Controls.Add(this.txbTotalPrice);
             this.panel4.Controls.Add(this.lsvBill);
             this.panel4.Controls.Add(this.btnCheckOut);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(342, 27);
+            this.panel4.Location = new System.Drawing.Point(361, 27);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(497, 584);
+            this.panel4.Size = new System.Drawing.Size(478, 580);
             this.panel4.TabIndex = 13;
             // 
             // lbTableName
@@ -198,7 +198,7 @@
             this.lsvBill.GridLines = true;
             this.lsvBill.Location = new System.Drawing.Point(7, 39);
             this.lsvBill.Name = "lsvBill";
-            this.lsvBill.Size = new System.Drawing.Size(484, 393);
+            this.lsvBill.Size = new System.Drawing.Size(465, 393);
             this.lsvBill.TabIndex = 3;
             this.lsvBill.UseCompatibleStateImageBehavior = false;
             this.lsvBill.View = System.Windows.Forms.View.Details;
@@ -206,19 +206,19 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Món gọi";
-            this.columnHeader1.Width = 211;
+            this.columnHeader1.Width = 195;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Số lượng";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 75;
+            this.columnHeader2.Width = 74;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Giá";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 90;
+            this.columnHeader3.Width = 85;
             // 
             // columnHeader4
             // 

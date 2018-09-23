@@ -41,12 +41,12 @@ namespace DAO
             return result.Rows.Count > 0;
         }
 
-        public bool UpdateAccount(string userName, string displayName, string passWord)
+        public bool UpdateAccount(string userName, string displayName, string passWord, int type)
         {
             string qr = string.Format("" +
                 "UPDATE Account " +
-                "SET Displayname = N'{0}', Password = N'{1}' " +
-                "WHERE Username = N'{2}' ", displayName, CryptoPassword(passWord), userName);
+                "SET Displayname = N'{0}', Password = N'{1}' , Type = {3} " +
+                "WHERE Username = N'{2}' ", displayName, CryptoPassword(passWord), userName, type);
 
             int result = DataProvider.Instance.ExecuteNonQuery(qr);
 
@@ -100,5 +100,11 @@ namespace DAO
             return result > 0;
         }
 
+        public string GetTypeAccount(string name)
+        {
+            string qr = string.Format("" +
+                "SELECT Type FROM Account WHERE Username = N'{0}'", name);
+            return (DataProvider.Instance.ExecuteScalar(qr)).ToString();
+        }
     }
 }

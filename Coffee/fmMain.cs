@@ -9,11 +9,24 @@ namespace Coffee
 {
     public partial class fmMain : Form
     {
+        private string typeAccount;
+        public string TypeAccount { get => typeAccount; set => typeAccount = value; }
+
         public fmMain()
         {
             InitializeComponent();
             LoadTable();
             LoadCate();
+        }
+
+        public fmMain(string type)
+        {
+            InitializeComponent();
+            LoadTable();
+            LoadCate();
+            this.typeAccount = type;
+            if (typeAccount == "1") menuStrip1.Enabled = true;
+            else menuStrip1.Enabled = false;
         }
         #region Method
 
@@ -38,8 +51,8 @@ namespace Coffee
                 };
                 btn.Click += btn_Click;
                 btn.Tag = item;
-                if (item.Status == "Trống") { btn.BackColor = Color.Cornsilk; }
-                else btn.BackColor = Color.Coral;
+                if (item.Status == "Trống") { btn.BackColor = Color.LimeGreen; }
+                else btn.BackColor = Color.Orange;
                 pnTable.Controls.Add(btn);
             }
         }
@@ -55,7 +68,7 @@ namespace Coffee
                 {
                     Width = 125,
                     Height = 70,
-                    BackColor = Color.CadetBlue,
+                    BackColor = Color.PaleGoldenrod,
                     Text = item.Name + Environment.NewLine + item.Price
                 };
                 btnFood.MouseDown += (sender, args) =>
@@ -74,10 +87,12 @@ namespace Coffee
                         {
                             BillDAO.Instance.InsertBill(table.ID);
                             BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), foodID, 1);
+                            LoadTable();
                         }
                         else
                         {
                             BillInfoDAO.Instance.InsertBillInfo(idBill, foodID, 1);
+                            LoadTable();
                         }
                         ShowBill(table.ID);
                     }

@@ -43,19 +43,16 @@ namespace Coffee
         {
             if (txbUsername.Enabled == false && txbPassword.Enabled == false && txbDisplayname.Enabled == false)
             {
-                txbUsername.Enabled = true;
-                txbPassword.Enabled = true;
-                txbDisplayname.Enabled = true;
+                EnableComponent();
             }
             else
             {
-
-                txbUsername.Enabled = false;
-                txbPassword.Enabled = false;
-                txbDisplayname.Enabled = false;
+                DisableComponent();
                 try
                 {
-                    AccountDAO.Instance.InsertAccount(txbUsername.Text, txbDisplayname.Text, txbPassword.Text, 0);
+                    int check = 0;
+                    if (rdbManager.Checked) check = 1;
+                    AccountDAO.Instance.InsertAccount(txbUsername.Text, txbDisplayname.Text, txbPassword.Text, check);
                     MessageBox.Show("Thêm thành công !!!");
                 }
                 catch (Exception) { MessageBox.Show("Có lỗi !!!"); }
@@ -67,18 +64,16 @@ namespace Coffee
         {
             if (txbUsername.Enabled == false && txbPassword.Enabled == false && txbDisplayname.Enabled == false)
             {
-                txbUsername.Enabled = true;
-                txbPassword.Enabled = true;
-                txbDisplayname.Enabled = true;
+                EnableComponent();
             }
             else
             {
-                txbUsername.Enabled = false;
-                txbPassword.Enabled = false;
-                txbDisplayname.Enabled = false;
+                DisableComponent();
                 try
                 {
-                    AccountDAO.Instance.UpdateAccount(txbUsername.Text, txbDisplayname.Text, txbPassword.Text);
+                    int check = 0;
+                    if (rdbManager.Checked) check = 1;
+                    AccountDAO.Instance.UpdateAccount(txbUsername.Text, txbDisplayname.Text, txbPassword.Text, check);
                     MessageBox.Show("Sửa thành công !!!");
                 }
                 catch (Exception) { MessageBox.Show("Có lỗi !!!"); }
@@ -92,9 +87,7 @@ namespace Coffee
             {
                 try
                 {
-                    txbUsername.Enabled = false;
-                    txbPassword.Enabled = false;
-                    txbDisplayname.Enabled = false;
+                    DisableComponent();
                     AccountDAO.Instance.DeleteAccount(txbUsername.Text);
                     MessageBox.Show("Xóa thành công !", "Thông báo !");
                     AddBinding();
@@ -110,6 +103,24 @@ namespace Coffee
             txbDisplayname.Enabled = false;
             if (dtgvAccount.CurrentRow.Cells[2].Value.ToString() == "Quản lý") rdbManager.Select();
             else rdbStaff.Select();
+        }
+
+        void DisableComponent()
+        {
+            txbUsername.Enabled = false;
+            txbPassword.Enabled = false;
+            txbDisplayname.Enabled = false;
+            rdbManager.Enabled = false;
+            rdbStaff.Enabled = false;
+        }
+
+        void EnableComponent()
+        {
+            txbUsername.Enabled = true;
+            txbPassword.Enabled = true;
+            txbDisplayname.Enabled = true;
+            rdbManager.Enabled = true;
+            rdbStaff.Enabled = true;
         }
     }
 }

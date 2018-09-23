@@ -44,9 +44,8 @@ namespace DAO
 
         public void InsertBill(int id)
         {
-            DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill @idTable", new object[] { id });
             DataProvider.Instance.ExecuteNonQuery("UPDATE TableFood SET status = N'Có người' WHERE id = " + id);
-
+            DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill @idTable", new object[] { id });
         }
 
 

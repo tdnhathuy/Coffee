@@ -24,7 +24,7 @@ namespace Coffee
             string passWord = txbPassword.Text;
             if (Login(userName, passWord))
             {
-                fmMain f = new fmMain();
+                fmMain f = new fmMain(AccountDAO.Instance.GetTypeAccount(userName));
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
