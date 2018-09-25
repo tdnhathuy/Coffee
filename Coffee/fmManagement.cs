@@ -75,10 +75,12 @@ namespace Coffee
             txbFoodID.DataBindings.Clear();
             txbFoodName.DataBindings.Clear();
             cbbFoodCate.DataBindings.Clear();
+            nbuFoodPrice.DataBindings.Clear();
 
             txbFoodID.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "ID", true, DataSourceUpdateMode.Never));
             txbFoodName.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Tên", true, DataSourceUpdateMode.Never));
             cbbFoodCate.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Danh mục", true, DataSourceUpdateMode.Never));
+            nbuFoodPrice.DataBindings.Add(new Binding("Value", dtgvFood.DataSource, "Giá", true, DataSourceUpdateMode.Never));
 
             dtgvCategory.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dtgvCategory.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -128,11 +130,11 @@ namespace Coffee
         //Tìm kiếm
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            listFood.DataSource = FoodDAO.Instance.SearchFoodByName(txbSearch.Text);
+            dtgvFood.DataSource = FoodDAO.Instance.SearchFoodByName(txbSearch.Text);
         }
         private void txbSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            listFood.DataSource = FoodDAO.Instance.SearchFoodByName(txbSearch.Text);
+            dtgvFood.DataSource = FoodDAO.Instance.SearchFoodByName(txbSearch.Text);
         }
         private void txbBillID_TextChanged(object sender, EventArgs e)
         {
@@ -320,11 +322,18 @@ namespace Coffee
             }
             else
             {
-                TableDAO.Instance.UpdateTable(Convert.ToInt32(txbTableID.Text), txbTableName.Text, txbTableStatus.Text);
-                txbTableName.Enabled = false;
-                txbTableStatus.Enabled = false;
-                Tab2();
-                MessageBox.Show("Sửa bàn thành công !!! ","Thông báo");
+                try {
+                    TableDAO.Instance.UpdateTable(Convert.ToInt32(txbTableID.Text), txbTableName.Text, txbTableStatus.Text);
+                    txbTableName.Enabled = false;
+                    txbTableStatus.Enabled = false;
+                    Tab2();
+                    MessageBox.Show("Sửa bàn thành công !!! ", "Thông báo");
+                }
+                catch
+                {
+                    MessageBox.Show("Tên bàn bị trùng", "Lỗi");
+                }
+
             }
         }
         private void btnTableDel_Click(object sender, EventArgs e)
