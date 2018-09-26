@@ -209,9 +209,12 @@ namespace Coffee
 
             if (idBill != -1)
             {
-                fmCash fm = new fmCash(idBill, table.ID, totalPrice * 1000, table.Name);
-                fm.ShowDialog();
-                LoadTable();
+                if (MessageBox.Show("Bạn có chắc thanh toán cho " + table.Name + "", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    BillDAO.Instance.CheckOut(idBill, table.ID, totalPrice * 1000);
+                    ShowBill(table.ID);
+                    LoadTable();
+                }
             }
         }
 
