@@ -78,21 +78,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CoffeeDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="CoffeeDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CoffeeDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="CoffeeRecipeDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CoffeeRecipeDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="CoffeeTotalPriceDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CoffeeTotalPriceDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\BillInfoDAO.cs" />
@@ -191,7 +176,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Recipe.rdlc" />
     <EmbeddedResource Include="ReportDaily.rdlc" />
     <None Include="CoffeeDataSet.xsc">
       <DependentUpon>CoffeeDataSet.xsd</DependentUpon>
@@ -203,39 +187,6 @@
     </None>
     <None Include="CoffeeDataSet.xss">
       <DependentUpon>CoffeeDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CoffeeDataSet1.xsc">
-      <DependentUpon>CoffeeDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="CoffeeDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CoffeeDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CoffeeDataSet1.xss">
-      <DependentUpon>CoffeeDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="CoffeeRecipeDataSet.xsc">
-      <DependentUpon>CoffeeRecipeDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CoffeeRecipeDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CoffeeRecipeDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CoffeeRecipeDataSet.xss">
-      <DependentUpon>CoffeeRecipeDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CoffeeTotalPriceDataSet.xsc">
-      <DependentUpon>CoffeeTotalPriceDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CoffeeTotalPriceDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CoffeeTotalPriceDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CoffeeTotalPriceDataSet.xss">
-      <DependentUpon>CoffeeTotalPriceDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\fmMain.datasource" />
     <None Include="Properties\DataSources\fmManagement.datasource" />

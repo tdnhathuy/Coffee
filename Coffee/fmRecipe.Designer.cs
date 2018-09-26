@@ -28,64 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.rpRecipe = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.CoffeeRecipeDataSet = new Coffee.CoffeeRecipeDataSet();
-            this.USP_RecipeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.USP_RecipeTableAdapter = new Coffee.CoffeeRecipeDataSetTableAdapters.USP_RecipeTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.CoffeeRecipeDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.USP_RecipeBindingSource)).BeginInit();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // rpRecipe
+            // reportViewer1
             // 
-            this.rpRecipe.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.USP_RecipeBindingSource;
-            this.rpRecipe.LocalReport.DataSources.Add(reportDataSource1);
-            this.rpRecipe.LocalReport.ReportEmbeddedResource = "Coffee.Recipe.rdlc";
-            this.rpRecipe.Location = new System.Drawing.Point(0, 0);
-            this.rpRecipe.Name = "rpRecipe";
-            this.rpRecipe.ServerReport.BearerToken = null;
-            this.rpRecipe.Size = new System.Drawing.Size(784, 311);
-            this.rpRecipe.TabIndex = 0;
-            // 
-            // CoffeeRecipeDataSet
-            // 
-            this.CoffeeRecipeDataSet.DataSetName = "CoffeeRecipeDataSet";
-            this.CoffeeRecipeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // USP_RecipeBindingSource
-            // 
-            this.USP_RecipeBindingSource.DataMember = "USP_Recipe";
-            this.USP_RecipeBindingSource.DataSource = this.CoffeeRecipeDataSet;
-            // 
-            // USP_RecipeTableAdapter
-            // 
-            this.USP_RecipeTableAdapter.ClearBeforeFill = true;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(999, 367);
+            this.reportViewer1.TabIndex = 0;
             // 
             // fmRecipe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 311);
-            this.Controls.Add(this.rpRecipe);
+            this.ClientSize = new System.Drawing.Size(999, 367);
+            this.Controls.Add(this.reportViewer1);
             this.Name = "fmRecipe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "In hóa đơn";
-            this.Load += new System.EventHandler(this.fmRecipe_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CoffeeRecipeDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.USP_RecipeBindingSource)).EndInit();
+            this.Load += new System.EventHandler(this.fmRecipe_Load_1);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer rpRecipe;
-        private System.Windows.Forms.BindingSource USP_RecipeBindingSource;
-        private CoffeeRecipeDataSet CoffeeRecipeDataSet;
-        private CoffeeRecipeDataSetTableAdapters.USP_RecipeTableAdapter USP_RecipeTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

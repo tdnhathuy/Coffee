@@ -33,5 +33,11 @@ namespace Coffee
 
             this.rpRecipe.RefreshReport();
         }
+
+        private void fmRecipe_Load_1(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
