@@ -95,3 +95,6 @@ C:\Users\Admin\Documents\Projects\Coffee\Coffee\bin\Debug\EntityFramework.SqlSer
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.fmReport.resources
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.fmLogin.resources
 C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.fmAccount.resources
+C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.fmCash.resources
+C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.fmChangeMoney.resources
+C:\Users\Admin\Documents\Projects\Coffee\Coffee\obj\Debug\Coffee.fmRecipe.resources

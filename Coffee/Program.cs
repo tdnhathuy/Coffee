@@ -16,7 +16,8 @@ namespace Coffee
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fmLogin());
+            Application.Run(new fmRecipe(61));
+            //Application.Run(new fmLogin());
         }
     }
 }
