@@ -9,8 +9,10 @@ namespace Coffee
 {
     public partial class fmMain : Form
     {
+        private string userName;
         private string typeAccount;
         public string TypeAccount { get => typeAccount; set => typeAccount = value; }
+        public string UserName { get => userName; set => userName = value; }
 
         public fmMain()
         {
@@ -19,11 +21,12 @@ namespace Coffee
             LoadCate();
         }
 
-        public fmMain(string type)
+        public fmMain(string userName, string type)
         {
             InitializeComponent();
             LoadTable();
             LoadCate();
+            this.userName = userName;
             this.typeAccount = type;
             if (typeAccount == "1") menuStrip1.Enabled = true;
             else menuStrip1.Enabled = false;
@@ -209,7 +212,7 @@ namespace Coffee
 
             if (idBill != -1)
             {
-                fmCash fm = new fmCash(idBill, table.ID, totalPrice * 1000, table.Name);
+                fmCash fm = new fmCash(idBill, table.ID, totalPrice * 1000, table.Name, userName);
                 fm.ShowDialog();
                 LoadTable();
             }

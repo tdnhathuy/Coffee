@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.USP_ReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.CoffeeDataSet = new Coffee.CoffeeDataSet();
+            this.CoffeeDataSet = new Coffee.DSReport();
             this.rpViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.USP_ReportTableAdapter = new Coffee.CoffeeDataSetTableAdapters.USP_ReportTableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -104,7 +104,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer rpViewer;
         private System.Windows.Forms.BindingSource USP_ReportBindingSource;
-        private CoffeeDataSet CoffeeDataSet;
+        private DSReport CoffeeDataSet;
         private CoffeeDataSetTableAdapters.USP_ReportTableAdapter USP_ReportTableAdapter;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;

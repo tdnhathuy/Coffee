@@ -115,7 +115,6 @@ namespace Coffee
         private void btnViewReport_Click(object sender, EventArgs e)
         {
             dtgvListFoodSold.DataSource = FoodDAO.Instance.GetListFoodSold(dtpkReportFrom.Value, dtpkReportTo.Value);
-
             dtgvListFoodSold.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dtgvListFoodSold.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dtgvListFoodSold.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -390,5 +389,11 @@ namespace Coffee
         }
         void Tab4() { }
         #endregion
+
+        private void btnPrintRecipe(object sender, EventArgs e)
+        {
+            fmRecipe fm = new fmRecipe(Convert.ToInt32(txbBillID.Text));
+            fm.ShowDialog();
+        }
     }
 }

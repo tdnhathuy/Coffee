@@ -20,17 +20,17 @@ namespace Coffee {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("CoffeeTotalPriceDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("CoffeeDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CoffeeTotalPriceDataSet : global::System.Data.DataSet {
+    public partial class DSReport : global::System.Data.DataSet {
         
-        private USP_GetTotalPriceByBillDataTable tableUSP_GetTotalPriceByBill;
+        private USP_ReportDataTable tableUSP_Report;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public CoffeeTotalPriceDataSet() {
+        public DSReport() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Coffee {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected CoffeeTotalPriceDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DSReport(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Coffee {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["USP_GetTotalPriceByBill"] != null)) {
-                    base.Tables.Add(new USP_GetTotalPriceByBillDataTable(ds.Tables["USP_GetTotalPriceByBill"]));
+                if ((ds.Tables["USP_Report"] != null)) {
+                    base.Tables.Add(new USP_ReportDataTable(ds.Tables["USP_Report"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Coffee {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public USP_GetTotalPriceByBillDataTable USP_GetTotalPriceByBill {
+        public USP_ReportDataTable USP_Report {
             get {
-                return this.tableUSP_GetTotalPriceByBill;
+                return this.tableUSP_Report;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Coffee {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CoffeeTotalPriceDataSet cln = ((CoffeeTotalPriceDataSet)(base.Clone()));
+            DSReport cln = ((DSReport)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Coffee {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["USP_GetTotalPriceByBill"] != null)) {
-                    base.Tables.Add(new USP_GetTotalPriceByBillDataTable(ds.Tables["USP_GetTotalPriceByBill"]));
+                if ((ds.Tables["USP_Report"] != null)) {
+                    base.Tables.Add(new USP_ReportDataTable(ds.Tables["USP_Report"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Coffee {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableUSP_GetTotalPriceByBill = ((USP_GetTotalPriceByBillDataTable)(base.Tables["USP_GetTotalPriceByBill"]));
+            this.tableUSP_Report = ((USP_ReportDataTable)(base.Tables["USP_Report"]));
             if ((initTable == true)) {
-                if ((this.tableUSP_GetTotalPriceByBill != null)) {
-                    this.tableUSP_GetTotalPriceByBill.InitVars();
+                if ((this.tableUSP_Report != null)) {
+                    this.tableUSP_Report.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Coffee {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "CoffeeTotalPriceDataSet";
+            this.DataSetName = "CoffeeDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CoffeeTotalPriceDataSet.xsd";
+            this.Namespace = "http://tempuri.org/CoffeeDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableUSP_GetTotalPriceByBill = new USP_GetTotalPriceByBillDataTable();
-            base.Tables.Add(this.tableUSP_GetTotalPriceByBill);
+            this.tableUSP_Report = new USP_ReportDataTable();
+            base.Tables.Add(this.tableUSP_Report);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeUSP_GetTotalPriceByBill() {
+        private bool ShouldSerializeUSP_Report() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Coffee {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CoffeeTotalPriceDataSet ds = new CoffeeTotalPriceDataSet();
+            DSReport ds = new DSReport();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,25 +270,27 @@ namespace Coffee {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void USP_GetTotalPriceByBillRowChangeEventHandler(object sender, USP_GetTotalPriceByBillRowChangeEvent e);
+        public delegate void USP_ReportRowChangeEventHandler(object sender, USP_ReportRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class USP_GetTotalPriceByBillDataTable : global::System.Data.TypedTableBase<USP_GetTotalPriceByBillRow> {
-            
-            private global::System.Data.DataColumn columnid;
+        public partial class USP_ReportDataTable : global::System.Data.TypedTableBase<USP_ReportRow> {
             
             private global::System.Data.DataColumn columnname;
             
             private global::System.Data.DataColumn columnColumn1;
             
+            private global::System.Data.DataColumn columnColumn2;
+            
+            private global::System.Data.DataColumn columnColumn3;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public USP_GetTotalPriceByBillDataTable() {
-                this.TableName = "USP_GetTotalPriceByBill";
+            public USP_ReportDataTable() {
+                this.TableName = "USP_Report";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -296,7 +298,7 @@ namespace Coffee {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal USP_GetTotalPriceByBillDataTable(global::System.Data.DataTable table) {
+            internal USP_ReportDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -313,17 +315,9 @@ namespace Coffee {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected USP_GetTotalPriceByBillDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected USP_ReportDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
-                get {
-                    return this.columnid;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -344,6 +338,22 @@ namespace Coffee {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Column2Column {
+                get {
+                    return this.columnColumn2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Column3Column {
+                get {
+                    return this.columnColumn3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -353,54 +363,48 @@ namespace Coffee {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public USP_GetTotalPriceByBillRow this[int index] {
+            public USP_ReportRow this[int index] {
                 get {
-                    return ((USP_GetTotalPriceByBillRow)(this.Rows[index]));
+                    return ((USP_ReportRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event USP_GetTotalPriceByBillRowChangeEventHandler USP_GetTotalPriceByBillRowChanging;
+            public event USP_ReportRowChangeEventHandler USP_ReportRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event USP_GetTotalPriceByBillRowChangeEventHandler USP_GetTotalPriceByBillRowChanged;
+            public event USP_ReportRowChangeEventHandler USP_ReportRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event USP_GetTotalPriceByBillRowChangeEventHandler USP_GetTotalPriceByBillRowDeleting;
+            public event USP_ReportRowChangeEventHandler USP_ReportRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event USP_GetTotalPriceByBillRowChangeEventHandler USP_GetTotalPriceByBillRowDeleted;
+            public event USP_ReportRowChangeEventHandler USP_ReportRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddUSP_GetTotalPriceByBillRow(USP_GetTotalPriceByBillRow row) {
+            public void AddUSP_ReportRow(USP_ReportRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public USP_GetTotalPriceByBillRow AddUSP_GetTotalPriceByBillRow(string name, double Column1) {
-                USP_GetTotalPriceByBillRow rowUSP_GetTotalPriceByBillRow = ((USP_GetTotalPriceByBillRow)(this.NewRow()));
+            public USP_ReportRow AddUSP_ReportRow(string name, int Column1, string Column2, string Column3) {
+                USP_ReportRow rowUSP_ReportRow = ((USP_ReportRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         name,
-                        Column1};
-                rowUSP_GetTotalPriceByBillRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowUSP_GetTotalPriceByBillRow);
-                return rowUSP_GetTotalPriceByBillRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public USP_GetTotalPriceByBillRow FindByid(int id) {
-                return ((USP_GetTotalPriceByBillRow)(this.Rows.Find(new object[] {
-                            id})));
+                        Column1,
+                        Column2,
+                        Column3};
+                rowUSP_ReportRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowUSP_ReportRow);
+                return rowUSP_ReportRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                USP_GetTotalPriceByBillDataTable cln = ((USP_GetTotalPriceByBillDataTable)(base.Clone()));
+                USP_ReportDataTable cln = ((USP_ReportDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -408,61 +412,62 @@ namespace Coffee {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new USP_GetTotalPriceByBillDataTable();
+                return new USP_ReportDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
                 this.columnname = base.Columns["name"];
                 this.columnColumn1 = base.Columns["Column1"];
+                this.columnColumn2 = base.Columns["Column2"];
+                this.columnColumn3 = base.Columns["Column3"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
                 this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
-                this.columnColumn1 = new global::System.Data.DataColumn("Column1", typeof(double), null, global::System.Data.MappingType.Element);
+                this.columnColumn1 = new global::System.Data.DataColumn("Column1", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnColumn1);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid}, true));
-                this.columnid.AutoIncrement = true;
-                this.columnid.AllowDBNull = false;
-                this.columnid.ReadOnly = true;
-                this.columnid.Unique = true;
+                this.columnColumn2 = new global::System.Data.DataColumn("Column2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColumn2);
+                this.columnColumn3 = new global::System.Data.DataColumn("Column3", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColumn3);
                 this.columnname.AllowDBNull = false;
                 this.columnname.MaxLength = 100;
                 this.columnColumn1.ReadOnly = true;
+                this.columnColumn2.ReadOnly = true;
+                this.columnColumn2.MaxLength = 4000;
+                this.columnColumn3.ReadOnly = true;
+                this.columnColumn3.MaxLength = 4000;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public USP_GetTotalPriceByBillRow NewUSP_GetTotalPriceByBillRow() {
-                return ((USP_GetTotalPriceByBillRow)(this.NewRow()));
+            public USP_ReportRow NewUSP_ReportRow() {
+                return ((USP_ReportRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new USP_GetTotalPriceByBillRow(builder);
+                return new USP_ReportRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(USP_GetTotalPriceByBillRow);
+                return typeof(USP_ReportRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.USP_GetTotalPriceByBillRowChanged != null)) {
-                    this.USP_GetTotalPriceByBillRowChanged(this, new USP_GetTotalPriceByBillRowChangeEvent(((USP_GetTotalPriceByBillRow)(e.Row)), e.Action));
+                if ((this.USP_ReportRowChanged != null)) {
+                    this.USP_ReportRowChanged(this, new USP_ReportRowChangeEvent(((USP_ReportRow)(e.Row)), e.Action));
                 }
             }
             
@@ -470,8 +475,8 @@ namespace Coffee {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.USP_GetTotalPriceByBillRowChanging != null)) {
-                    this.USP_GetTotalPriceByBillRowChanging(this, new USP_GetTotalPriceByBillRowChangeEvent(((USP_GetTotalPriceByBillRow)(e.Row)), e.Action));
+                if ((this.USP_ReportRowChanging != null)) {
+                    this.USP_ReportRowChanging(this, new USP_ReportRowChangeEvent(((USP_ReportRow)(e.Row)), e.Action));
                 }
             }
             
@@ -479,8 +484,8 @@ namespace Coffee {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.USP_GetTotalPriceByBillRowDeleted != null)) {
-                    this.USP_GetTotalPriceByBillRowDeleted(this, new USP_GetTotalPriceByBillRowChangeEvent(((USP_GetTotalPriceByBillRow)(e.Row)), e.Action));
+                if ((this.USP_ReportRowDeleted != null)) {
+                    this.USP_ReportRowDeleted(this, new USP_ReportRowChangeEvent(((USP_ReportRow)(e.Row)), e.Action));
                 }
             }
             
@@ -488,14 +493,14 @@ namespace Coffee {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.USP_GetTotalPriceByBillRowDeleting != null)) {
-                    this.USP_GetTotalPriceByBillRowDeleting(this, new USP_GetTotalPriceByBillRowChangeEvent(((USP_GetTotalPriceByBillRow)(e.Row)), e.Action));
+                if ((this.USP_ReportRowDeleting != null)) {
+                    this.USP_ReportRowDeleting(this, new USP_ReportRowChangeEvent(((USP_ReportRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveUSP_GetTotalPriceByBillRow(USP_GetTotalPriceByBillRow row) {
+            public void RemoveUSP_ReportRow(USP_ReportRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -504,7 +509,7 @@ namespace Coffee {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CoffeeTotalPriceDataSet ds = new CoffeeTotalPriceDataSet();
+                DSReport ds = new DSReport();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -522,7 +527,7 @@ namespace Coffee {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "USP_GetTotalPriceByBillDataTable";
+                attribute2.FixedValue = "USP_ReportDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -566,65 +571,110 @@ namespace Coffee {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class USP_GetTotalPriceByBillRow : global::System.Data.DataRow {
+        public partial class USP_ReportRow : global::System.Data.DataRow {
             
-            private USP_GetTotalPriceByBillDataTable tableUSP_GetTotalPriceByBill;
+            private USP_ReportDataTable tableUSP_Report;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal USP_GetTotalPriceByBillRow(global::System.Data.DataRowBuilder rb) : 
+            internal USP_ReportRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableUSP_GetTotalPriceByBill = ((USP_GetTotalPriceByBillDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int id {
-                get {
-                    return ((int)(this[this.tableUSP_GetTotalPriceByBill.idColumn]));
-                }
-                set {
-                    this[this.tableUSP_GetTotalPriceByBill.idColumn] = value;
-                }
+                this.tableUSP_Report = ((USP_ReportDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string name {
                 get {
-                    return ((string)(this[this.tableUSP_GetTotalPriceByBill.nameColumn]));
+                    return ((string)(this[this.tableUSP_Report.nameColumn]));
                 }
                 set {
-                    this[this.tableUSP_GetTotalPriceByBill.nameColumn] = value;
+                    this[this.tableUSP_Report.nameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public double Column1 {
+            public int Column1 {
                 get {
                     try {
-                        return ((double)(this[this.tableUSP_GetTotalPriceByBill.Column1Column]));
+                        return ((int)(this[this.tableUSP_Report.Column1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Column1\' in table \'USP_GetTotalPriceByBill\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Column1\' in table \'USP_Report\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUSP_GetTotalPriceByBill.Column1Column] = value;
+                    this[this.tableUSP_Report.Column1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Column2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableUSP_Report.Column2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Column2\' in table \'USP_Report\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUSP_Report.Column2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Column3 {
+                get {
+                    try {
+                        return ((string)(this[this.tableUSP_Report.Column3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Column3\' in table \'USP_Report\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUSP_Report.Column3Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsColumn1Null() {
-                return this.IsNull(this.tableUSP_GetTotalPriceByBill.Column1Column);
+                return this.IsNull(this.tableUSP_Report.Column1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetColumn1Null() {
-                this[this.tableUSP_GetTotalPriceByBill.Column1Column] = global::System.Convert.DBNull;
+                this[this.tableUSP_Report.Column1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsColumn2Null() {
+                return this.IsNull(this.tableUSP_Report.Column2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetColumn2Null() {
+                this[this.tableUSP_Report.Column2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsColumn3Null() {
+                return this.IsNull(this.tableUSP_Report.Column3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetColumn3Null() {
+                this[this.tableUSP_Report.Column3Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -632,22 +682,22 @@ namespace Coffee {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class USP_GetTotalPriceByBillRowChangeEvent : global::System.EventArgs {
+        public class USP_ReportRowChangeEvent : global::System.EventArgs {
             
-            private USP_GetTotalPriceByBillRow eventRow;
+            private USP_ReportRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public USP_GetTotalPriceByBillRowChangeEvent(USP_GetTotalPriceByBillRow row, global::System.Data.DataRowAction action) {
+            public USP_ReportRowChangeEvent(USP_ReportRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public USP_GetTotalPriceByBillRow Row {
+            public USP_ReportRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -663,7 +713,7 @@ namespace Coffee {
         }
     }
 }
-namespace Coffee.CoffeeTotalPriceDataSetTableAdapters {
+namespace Coffee.CoffeeDataSetTableAdapters {
     
     
     /// <summary>
@@ -675,7 +725,7 @@ namespace Coffee.CoffeeTotalPriceDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class USP_GetTotalPriceByBillTableAdapter : global::System.ComponentModel.Component {
+    public partial class USP_ReportTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -689,7 +739,7 @@ namespace Coffee.CoffeeTotalPriceDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public USP_GetTotalPriceByBillTableAdapter() {
+        public USP_ReportTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -786,10 +836,11 @@ namespace Coffee.CoffeeTotalPriceDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "USP_GetTotalPriceByBill";
-            tableMapping.ColumnMappings.Add("id", "id");
+            tableMapping.DataSetTable = "USP_Report";
             tableMapping.ColumnMappings.Add("name", "name");
             tableMapping.ColumnMappings.Add("Column1", "Column1");
+            tableMapping.ColumnMappings.Add("Column2", "Column2");
+            tableMapping.ColumnMappings.Add("Column3", "Column3");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -806,23 +857,30 @@ namespace Coffee.CoffeeTotalPriceDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.USP_GetTotalPriceByBill";
+            this._commandCollection[0].CommandText = "dbo.USP_Report";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idBill", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateFrom", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateTo", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CoffeeTotalPriceDataSet.USP_GetTotalPriceByBillDataTable dataTable, string idBill) {
+        public virtual int Fill(DSReport.USP_ReportDataTable dataTable, global::System.Nullable<global::System.DateTime> dateFrom, global::System.Nullable<global::System.DateTime> dateTo) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((idBill == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            if ((dateFrom.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(dateFrom.Value));
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(idBill));
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((dateTo.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(dateTo.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -835,15 +893,21 @@ namespace Coffee.CoffeeTotalPriceDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CoffeeTotalPriceDataSet.USP_GetTotalPriceByBillDataTable GetData(string idBill) {
+        public virtual DSReport.USP_ReportDataTable GetData(global::System.Nullable<global::System.DateTime> dateFrom, global::System.Nullable<global::System.DateTime> dateTo) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((idBill == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            if ((dateFrom.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(dateFrom.Value));
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(idBill));
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            CoffeeTotalPriceDataSet.USP_GetTotalPriceByBillDataTable dataTable = new CoffeeTotalPriceDataSet.USP_GetTotalPriceByBillDataTable();
+            if ((dateTo.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(dateTo.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            DSReport.USP_ReportDataTable dataTable = new DSReport.USP_ReportDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -917,7 +981,7 @@ namespace Coffee.CoffeeTotalPriceDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(CoffeeTotalPriceDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DSReport dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -927,7 +991,7 @@ namespace Coffee.CoffeeTotalPriceDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(CoffeeTotalPriceDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DSReport dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -937,7 +1001,7 @@ namespace Coffee.CoffeeTotalPriceDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(CoffeeTotalPriceDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DSReport dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -971,7 +1035,7 @@ namespace Coffee.CoffeeTotalPriceDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(CoffeeTotalPriceDataSet dataSet) {
+        public virtual int UpdateAll(DSReport dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

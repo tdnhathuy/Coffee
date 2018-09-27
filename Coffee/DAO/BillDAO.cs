@@ -33,11 +33,14 @@ namespace DAO
             return -1;
         }
 
-        public void CheckOut(int idBill, int idTable, int totalPrice)
+        public void CheckOut(int idBill, int idTable, int totalPrice, string cashierName)
         {
-            string qr1 = "UPDATE Bill SET dateCheckOut = GETDATE(), status = 1, totalPrice = " + totalPrice + " WHERE id = " + idBill;
+            string qr = string.Format("" +
+                "UPDATE Bill " +
+                "SET dateCheckOut = GETDATE(), status = 1, totalPrice = {0}, cashier = N'{2}' " +
+                "WHERE id = {1}", totalPrice, idBill, cashierName);
             string qr2 = "UPDATE TableFood SET status = N'Trống' WHERE id = " + idTable;
-            DataProvider.Instance.ExecuteNonQuery(qr1);
+            DataProvider.Instance.ExecuteNonQuery(qr);
             DataProvider.Instance.ExecuteNonQuery(qr2);
 
         }
@@ -52,9 +55,9 @@ namespace DAO
         public DataTable GetBillListByDate(DateTime checkIn, DateTime checkOut)
         {
             string qr = "" +
-                "SELECT b.id AS [Số hóa đơn], b.DateCheckIn AS [Giờ vào], b.DateCheckOut AS [Giờ ra], t.Name AS [Bàn], b.totalPrice AS [Tổng tiền] " +
-                "FROM Bill AS b, TableFood t " +
-                "WHERE DateCheckIn >= '" + checkIn.ToShortDateString() + " 00:00:01' AND DateCheckOut <= '" + checkOut.ToShortDateString() + " 23:59:59' AND b.idTable = t.ID AND b.status = 1";
+                "SELECT b.id AS [Số hóa đơn], b.DateCheckIn AS [Giờ vào], b.DateCheckOut AS [Giờ ra], t.Name AS [Bàn], b.totalPrice AS [Tổng tiền], a.DisplayName as [Thu ngân] " +
+                "FROM Bill AS b, TableFood t, Account a " +
+                "WHERE DateCheckIn >= '" + checkIn.ToShortDateString() + " 00:00:01' AND DateCheckOut <= '" + checkOut.ToShortDateString() + " 23:59:59' AND b.idTable = t.ID AND b.status = 1 AND b.Cashier = a.UserName ";
             return DataProvider.Instance.ExecuteQuery(qr);
         }
 

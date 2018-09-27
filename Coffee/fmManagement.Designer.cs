@@ -78,6 +78,9 @@
             this.btnCateAdd = new System.Windows.Forms.Button();
             this.dtgvCategory = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnTableDel = new System.Windows.Forms.Button();
+            this.btnTableEdit = new System.Windows.Forms.Button();
+            this.btnTableAdd = new System.Windows.Forms.Button();
             this.txbTableStatus = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txbTableName = new System.Windows.Forms.TextBox();
@@ -94,10 +97,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.dtgvListFoodSold = new System.Windows.Forms.DataGridView();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.btnTableAdd = new System.Windows.Forms.Button();
-            this.btnTableEdit = new System.Windows.Forms.Button();
-            this.btnTableDel = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -121,7 +121,6 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -132,6 +131,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.txbBillID);
             this.tabPage1.Controls.Add(this.lsvFood);
@@ -164,7 +164,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(538, 14);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(430, 251);
+            this.groupBox4.Size = new System.Drawing.Size(430, 155);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin";
@@ -645,6 +645,39 @@
             this.tabPage3.Text = "Bàn ăn";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // btnTableDel
+            // 
+            this.btnTableDel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTableDel.Location = new System.Drawing.Point(868, 123);
+            this.btnTableDel.Name = "btnTableDel";
+            this.btnTableDel.Size = new System.Drawing.Size(100, 35);
+            this.btnTableDel.TabIndex = 9;
+            this.btnTableDel.Text = "Xóa";
+            this.btnTableDel.UseVisualStyleBackColor = true;
+            this.btnTableDel.Click += new System.EventHandler(this.btnTableDel_Click);
+            // 
+            // btnTableEdit
+            // 
+            this.btnTableEdit.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTableEdit.Location = new System.Drawing.Point(762, 123);
+            this.btnTableEdit.Name = "btnTableEdit";
+            this.btnTableEdit.Size = new System.Drawing.Size(100, 35);
+            this.btnTableEdit.TabIndex = 8;
+            this.btnTableEdit.Text = "Sửa";
+            this.btnTableEdit.UseVisualStyleBackColor = true;
+            this.btnTableEdit.Click += new System.EventHandler(this.btnTableEdit_Click);
+            // 
+            // btnTableAdd
+            // 
+            this.btnTableAdd.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTableAdd.Location = new System.Drawing.Point(656, 123);
+            this.btnTableAdd.Name = "btnTableAdd";
+            this.btnTableAdd.Size = new System.Drawing.Size(100, 35);
+            this.btnTableAdd.TabIndex = 7;
+            this.btnTableAdd.Text = "Thêm";
+            this.btnTableAdd.UseVisualStyleBackColor = true;
+            this.btnTableAdd.Click += new System.EventHandler(this.btnTableAdd_Click);
+            // 
             // txbTableStatus
             // 
             this.txbTableStatus.Enabled = false;
@@ -801,48 +834,15 @@
             this.dtgvListFoodSold.Size = new System.Drawing.Size(528, 591);
             this.dtgvListFoodSold.TabIndex = 0;
             // 
-            // tabPage5
+            // button1
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 28);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(976, 629);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // btnTableAdd
-            // 
-            this.btnTableAdd.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableAdd.Location = new System.Drawing.Point(656, 123);
-            this.btnTableAdd.Name = "btnTableAdd";
-            this.btnTableAdd.Size = new System.Drawing.Size(100, 35);
-            this.btnTableAdd.TabIndex = 7;
-            this.btnTableAdd.Text = "Thêm";
-            this.btnTableAdd.UseVisualStyleBackColor = true;
-            this.btnTableAdd.Click += new System.EventHandler(this.btnTableAdd_Click);
-            // 
-            // btnTableEdit
-            // 
-            this.btnTableEdit.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableEdit.Location = new System.Drawing.Point(762, 123);
-            this.btnTableEdit.Name = "btnTableEdit";
-            this.btnTableEdit.Size = new System.Drawing.Size(100, 35);
-            this.btnTableEdit.TabIndex = 8;
-            this.btnTableEdit.Text = "Sửa";
-            this.btnTableEdit.UseVisualStyleBackColor = true;
-            this.btnTableEdit.Click += new System.EventHandler(this.btnTableEdit_Click);
-            // 
-            // btnTableDel
-            // 
-            this.btnTableDel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableDel.Location = new System.Drawing.Point(868, 123);
-            this.btnTableDel.Name = "btnTableDel";
-            this.btnTableDel.Size = new System.Drawing.Size(100, 35);
-            this.btnTableDel.TabIndex = 9;
-            this.btnTableDel.Text = "Xóa";
-            this.btnTableDel.UseVisualStyleBackColor = true;
-            this.btnTableDel.Click += new System.EventHandler(this.btnTableDel_Click);
+            this.button1.Location = new System.Drawing.Point(538, 170);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 95);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "In hóa đơn";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnPrintRecipe);
             // 
             // fmManagement
             // 
@@ -922,7 +922,6 @@
         private System.Windows.Forms.TextBox txbBillID;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dtgvListFoodSold;
         private System.Windows.Forms.ColumnHeader columnHeader4;
@@ -953,5 +952,6 @@
         private System.Windows.Forms.Button btnTableDel;
         private System.Windows.Forms.Button btnTableEdit;
         private System.Windows.Forms.Button btnTableAdd;
+        private System.Windows.Forms.Button button1;
     }
 }

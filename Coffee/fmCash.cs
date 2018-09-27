@@ -12,6 +12,7 @@ namespace Coffee
         private int idTable;
         private int totalPrice;
         private string tableName;
+        private string userName;
 
         string t;
 
@@ -19,16 +20,18 @@ namespace Coffee
         public int IdTable { get => idTable; set => idTable = value; }
         public int TotalPrice { get => totalPrice; set => totalPrice = value; }
         public string TableName { get => tableName; set => tableName = value; }
+        public string UserName { get => userName; set => userName = value; }
 
-        public fmCash(int idBill, int idTable, int totalPrice, string tableName)
+        public fmCash(int idBill, int idTable, int totalPrice, string tableName, string userName)
         {
             InitializeComponent();
 
             this.idBill = idBill;
             this.idTable = idTable;
             this.totalPrice = totalPrice;
-            txbTotalPrice.Text = totalPrice.ToString();
             this.tableName = tableName;
+            this.userName = userName;
+            txbTotalPrice.Text = totalPrice.ToString();
 
             this.Text = "Thanh toán bàn " + tableName;
 
@@ -104,7 +107,7 @@ namespace Coffee
             {
                 if (change >= 0)
                 {
-                    BillDAO.Instance.CheckOut(idBill, IdTable, TotalPrice);
+                    BillDAO.Instance.CheckOut(idBill, IdTable, TotalPrice, userName);
                     fmChangeMoney fm = new fmChangeMoney(idBill, change);
                     fm.ShowDialog();
                     this.Dispose();

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="CoffeeRecipeDataSet" targetNamespace="http://tempuri.org/CoffeeRecipeDataSet.xsd" xmlns:mstns="http://tempuri.org/CoffeeRecipeDataSet.xsd" xmlns="http://tempuri.org/CoffeeRecipeDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="DSRecipe" targetNamespace="http://tempuri.org/DSRecipe.xsd" xmlns:mstns="http://tempuri.org/DSRecipe.xsd" xmlns="http://tempuri.org/DSRecipe.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -27,6 +27,10 @@
               <Mapping SourceColumn="count" DataSetColumn="count" />
               <Mapping SourceColumn="price" DataSetColumn="price" />
               <Mapping SourceColumn="Column1" DataSetColumn="Column1" />
+              <Mapping SourceColumn="DisplayName" DataSetColumn="DisplayName" />
+              <Mapping SourceColumn="totalPrice" DataSetColumn="totalPrice" />
+              <Mapping SourceColumn="DateCheckIn" DataSetColumn="DateCheckIn" />
+              <Mapping SourceColumn="DateCheckOut" DataSetColumn="DateCheckOut" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -35,7 +39,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="CoffeeRecipeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CoffeeRecipeDataSet" msprop:Generator_UserDSName="CoffeeRecipeDataSet">
+  <xs:element name="DSRecipe" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DSRecipe" msprop:Generator_UserDSName="DSRecipe">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="USP_Recipe" msprop:Generator_TableClassName="USP_RecipeDataTable" msprop:Generator_TableVarName="tableUSP_Recipe" msprop:Generator_TablePropName="USP_Recipe" msprop:Generator_RowDeletingName="USP_RecipeRowDeleting" msprop:Generator_RowChangingName="USP_RecipeRowChanging" msprop:Generator_RowEvHandlerName="USP_RecipeRowChangeEventHandler" msprop:Generator_RowDeletedName="USP_RecipeRowDeleted" msprop:Generator_UserTableName="USP_Recipe" msprop:Generator_RowChangedName="USP_RecipeRowChanged" msprop:Generator_RowEvArgName="USP_RecipeRowChangeEvent" msprop:Generator_RowClassName="USP_RecipeRow">
@@ -58,6 +62,16 @@
               <xs:element name="count" msprop:Generator_ColumnVarNameInTable="columncount" msprop:Generator_ColumnPropNameInRow="count" msprop:Generator_ColumnPropNameInTable="countColumn" msprop:Generator_UserColumnName="count" type="xs:int" />
               <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:double" />
               <xs:element name="Column1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnColumn1" msprop:Generator_ColumnPropNameInRow="Column1" msprop:Generator_ColumnPropNameInTable="Column1Column" msprop:Generator_UserColumnName="Column1" type="xs:double" minOccurs="0" />
+              <xs:element name="DisplayName" msprop:Generator_ColumnVarNameInTable="columnDisplayName" msprop:Generator_ColumnPropNameInRow="DisplayName" msprop:Generator_ColumnPropNameInTable="DisplayNameColumn" msprop:Generator_UserColumnName="DisplayName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="totalPrice" msprop:Generator_ColumnVarNameInTable="columntotalPrice" msprop:Generator_ColumnPropNameInRow="totalPrice" msprop:Generator_ColumnPropNameInTable="totalPriceColumn" msprop:Generator_UserColumnName="totalPrice" type="xs:int" minOccurs="0" />
+              <xs:element name="DateCheckIn" msprop:Generator_ColumnVarNameInTable="columnDateCheckIn" msprop:Generator_ColumnPropNameInRow="DateCheckIn" msprop:Generator_ColumnPropNameInTable="DateCheckInColumn" msprop:Generator_UserColumnName="DateCheckIn" type="xs:dateTime" />
+              <xs:element name="DateCheckOut" msprop:Generator_ColumnVarNameInTable="columnDateCheckOut" msprop:Generator_ColumnPropNameInRow="DateCheckOut" msprop:Generator_ColumnPropNameInTable="DateCheckOutColumn" msprop:Generator_UserColumnName="DateCheckOut" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

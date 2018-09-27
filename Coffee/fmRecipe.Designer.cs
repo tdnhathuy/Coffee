@@ -31,35 +31,35 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.rpRecipe = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.CoffeeRecipeDataSet = new Coffee.CoffeeRecipeDataSet();
+            this.DSRecipe = new Coffee.DSRecipe();
             this.USP_RecipeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.USP_RecipeTableAdapter = new Coffee.CoffeeRecipeDataSetTableAdapters.USP_RecipeTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.CoffeeRecipeDataSet)).BeginInit();
+            this.USP_RecipeTableAdapter = new Coffee.DSRecipeTableAdapters.USP_RecipeTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.DSRecipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.USP_RecipeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // rpRecipe
             // 
             this.rpRecipe.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Name = "DSRecipe";
             reportDataSource1.Value = this.USP_RecipeBindingSource;
             this.rpRecipe.LocalReport.DataSources.Add(reportDataSource1);
             this.rpRecipe.LocalReport.ReportEmbeddedResource = "Coffee.Recipe.rdlc";
             this.rpRecipe.Location = new System.Drawing.Point(0, 0);
             this.rpRecipe.Name = "rpRecipe";
             this.rpRecipe.ServerReport.BearerToken = null;
-            this.rpRecipe.Size = new System.Drawing.Size(784, 311);
+            this.rpRecipe.Size = new System.Drawing.Size(800, 450);
             this.rpRecipe.TabIndex = 0;
             // 
-            // CoffeeRecipeDataSet
+            // DSRecipe
             // 
-            this.CoffeeRecipeDataSet.DataSetName = "CoffeeRecipeDataSet";
-            this.CoffeeRecipeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.DSRecipe.DataSetName = "DSRecipe";
+            this.DSRecipe.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // USP_RecipeBindingSource
             // 
             this.USP_RecipeBindingSource.DataMember = "USP_Recipe";
-            this.USP_RecipeBindingSource.DataSource = this.CoffeeRecipeDataSet;
+            this.USP_RecipeBindingSource.DataSource = this.DSRecipe;
             // 
             // USP_RecipeTableAdapter
             // 
@@ -69,13 +69,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 311);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.rpRecipe);
             this.Name = "fmRecipe";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "In hóa đơn";
+            this.Text = "fmRecipe";
             this.Load += new System.EventHandler(this.fmRecipe_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CoffeeRecipeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DSRecipe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.USP_RecipeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -85,7 +84,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer rpRecipe;
         private System.Windows.Forms.BindingSource USP_RecipeBindingSource;
-        private CoffeeRecipeDataSet CoffeeRecipeDataSet;
-        private CoffeeRecipeDataSetTableAdapters.USP_RecipeTableAdapter USP_RecipeTableAdapter;
+        private DSRecipe DSRecipe;
+        private DSRecipeTableAdapters.USP_RecipeTableAdapter USP_RecipeTableAdapter;
     }
 }

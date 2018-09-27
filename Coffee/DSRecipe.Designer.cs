@@ -20,9 +20,9 @@ namespace Coffee {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("CoffeeRecipeDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DSRecipe")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CoffeeRecipeDataSet : global::System.Data.DataSet {
+    public partial class DSRecipe : global::System.Data.DataSet {
         
         private USP_RecipeDataTable tableUSP_Recipe;
         
@@ -30,7 +30,7 @@ namespace Coffee {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public CoffeeRecipeDataSet() {
+        public DSRecipe() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Coffee {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected CoffeeRecipeDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DSRecipe(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Coffee {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CoffeeRecipeDataSet cln = ((CoffeeRecipeDataSet)(base.Clone()));
+            DSRecipe cln = ((DSRecipe)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Coffee {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "CoffeeRecipeDataSet";
+            this.DataSetName = "DSRecipe";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CoffeeRecipeDataSet.xsd";
+            this.Namespace = "http://tempuri.org/DSRecipe.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableUSP_Recipe = new USP_RecipeDataTable();
@@ -225,7 +225,7 @@ namespace Coffee {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CoffeeRecipeDataSet ds = new CoffeeRecipeDataSet();
+            DSRecipe ds = new DSRecipe();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -288,6 +288,14 @@ namespace Coffee {
             private global::System.Data.DataColumn columnprice;
             
             private global::System.Data.DataColumn columnColumn1;
+            
+            private global::System.Data.DataColumn columnDisplayName;
+            
+            private global::System.Data.DataColumn columntotalPrice;
+            
+            private global::System.Data.DataColumn columnDateCheckIn;
+            
+            private global::System.Data.DataColumn columnDateCheckOut;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -364,6 +372,38 @@ namespace Coffee {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DisplayNameColumn {
+                get {
+                    return this.columnDisplayName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn totalPriceColumn {
+                get {
+                    return this.columntotalPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DateCheckInColumn {
+                get {
+                    return this.columnDateCheckIn;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DateCheckOutColumn {
+                get {
+                    return this.columnDateCheckOut;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -399,14 +439,18 @@ namespace Coffee {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public USP_RecipeRow AddUSP_RecipeRow(string name, string name1, int count, double price, double Column1) {
+            public USP_RecipeRow AddUSP_RecipeRow(string name, string name1, int count, double price, double Column1, string DisplayName, int totalPrice, System.DateTime DateCheckIn, System.DateTime DateCheckOut) {
                 USP_RecipeRow rowUSP_RecipeRow = ((USP_RecipeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         name,
                         name1,
                         count,
                         price,
-                        Column1};
+                        Column1,
+                        DisplayName,
+                        totalPrice,
+                        DateCheckIn,
+                        DateCheckOut};
                 rowUSP_RecipeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUSP_RecipeRow);
                 return rowUSP_RecipeRow;
@@ -434,6 +478,10 @@ namespace Coffee {
                 this.columncount = base.Columns["count"];
                 this.columnprice = base.Columns["price"];
                 this.columnColumn1 = base.Columns["Column1"];
+                this.columnDisplayName = base.Columns["DisplayName"];
+                this.columntotalPrice = base.Columns["totalPrice"];
+                this.columnDateCheckIn = base.Columns["DateCheckIn"];
+                this.columnDateCheckOut = base.Columns["DateCheckOut"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -449,6 +497,14 @@ namespace Coffee {
                 base.Columns.Add(this.columnprice);
                 this.columnColumn1 = new global::System.Data.DataColumn("Column1", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnColumn1);
+                this.columnDisplayName = new global::System.Data.DataColumn("DisplayName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDisplayName);
+                this.columntotalPrice = new global::System.Data.DataColumn("totalPrice", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotalPrice);
+                this.columnDateCheckIn = new global::System.Data.DataColumn("DateCheckIn", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateCheckIn);
+                this.columnDateCheckOut = new global::System.Data.DataColumn("DateCheckOut", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateCheckOut);
                 this.columnname.AllowDBNull = false;
                 this.columnname.MaxLength = 100;
                 this.columnname1.AllowDBNull = false;
@@ -456,6 +512,9 @@ namespace Coffee {
                 this.columncount.AllowDBNull = false;
                 this.columnprice.AllowDBNull = false;
                 this.columnColumn1.ReadOnly = true;
+                this.columnDisplayName.AllowDBNull = false;
+                this.columnDisplayName.MaxLength = 100;
+                this.columnDateCheckIn.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -523,7 +582,7 @@ namespace Coffee {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CoffeeRecipeDataSet ds = new CoffeeRecipeDataSet();
+                DSRecipe ds = new DSRecipe();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -658,6 +717,60 @@ namespace Coffee {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string DisplayName {
+                get {
+                    return ((string)(this[this.tableUSP_Recipe.DisplayNameColumn]));
+                }
+                set {
+                    this[this.tableUSP_Recipe.DisplayNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int totalPrice {
+                get {
+                    try {
+                        return ((int)(this[this.tableUSP_Recipe.totalPriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'totalPrice\' in table \'USP_Recipe\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUSP_Recipe.totalPriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime DateCheckIn {
+                get {
+                    return ((global::System.DateTime)(this[this.tableUSP_Recipe.DateCheckInColumn]));
+                }
+                set {
+                    this[this.tableUSP_Recipe.DateCheckInColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime DateCheckOut {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableUSP_Recipe.DateCheckOutColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateCheckOut\' in table \'USP_Recipe\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUSP_Recipe.DateCheckOutColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsColumn1Null() {
                 return this.IsNull(this.tableUSP_Recipe.Column1Column);
             }
@@ -666,6 +779,30 @@ namespace Coffee {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetColumn1Null() {
                 this[this.tableUSP_Recipe.Column1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IstotalPriceNull() {
+                return this.IsNull(this.tableUSP_Recipe.totalPriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SettotalPriceNull() {
+                this[this.tableUSP_Recipe.totalPriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDateCheckOutNull() {
+                return this.IsNull(this.tableUSP_Recipe.DateCheckOutColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDateCheckOutNull() {
+                this[this.tableUSP_Recipe.DateCheckOutColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -704,7 +841,7 @@ namespace Coffee {
         }
     }
 }
-namespace Coffee.CoffeeRecipeDataSetTableAdapters {
+namespace Coffee.DSRecipeTableAdapters {
     
     
     /// <summary>
@@ -833,6 +970,10 @@ namespace Coffee.CoffeeRecipeDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("count", "count");
             tableMapping.ColumnMappings.Add("price", "price");
             tableMapping.ColumnMappings.Add("Column1", "Column1");
+            tableMapping.ColumnMappings.Add("DisplayName", "DisplayName");
+            tableMapping.ColumnMappings.Add("totalPrice", "totalPrice");
+            tableMapping.ColumnMappings.Add("DateCheckIn", "DateCheckIn");
+            tableMapping.ColumnMappings.Add("DateCheckOut", "DateCheckOut");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -859,7 +1000,7 @@ namespace Coffee.CoffeeRecipeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CoffeeRecipeDataSet.USP_RecipeDataTable dataTable, string idBill) {
+        public virtual int Fill(DSRecipe.USP_RecipeDataTable dataTable, string idBill) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((idBill == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -878,7 +1019,7 @@ namespace Coffee.CoffeeRecipeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CoffeeRecipeDataSet.USP_RecipeDataTable GetData(string idBill) {
+        public virtual DSRecipe.USP_RecipeDataTable GetData(string idBill) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((idBill == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -886,7 +1027,7 @@ namespace Coffee.CoffeeRecipeDataSetTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(idBill));
             }
-            CoffeeRecipeDataSet.USP_RecipeDataTable dataTable = new CoffeeRecipeDataSet.USP_RecipeDataTable();
+            DSRecipe.USP_RecipeDataTable dataTable = new DSRecipe.USP_RecipeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -960,7 +1101,7 @@ namespace Coffee.CoffeeRecipeDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(CoffeeRecipeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DSRecipe dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -970,7 +1111,7 @@ namespace Coffee.CoffeeRecipeDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(CoffeeRecipeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DSRecipe dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -980,7 +1121,7 @@ namespace Coffee.CoffeeRecipeDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(CoffeeRecipeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DSRecipe dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1014,7 +1155,7 @@ namespace Coffee.CoffeeRecipeDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(CoffeeRecipeDataSet dataSet) {
+        public virtual int UpdateAll(DSRecipe dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
