@@ -98,7 +98,7 @@ namespace DAO
 
         public DataTable GetListFoodSold(DateTime dateFrom, DateTime dateTo)
         {
-            string qr = string.Format("" +
+            string qr = string.Format("SET DATEFORMAT dmy " +
                 "SELECT c.name as [Tên món], SUM(b.count) as [Số lượng bán], FORMAT(c.price, '#,### VNĐ') as [Đơn giá], FORMAT(SUM(b.count) * c.price, '#,### VNĐ') as [Tổng tiền] " +
                 "FROM Bill a, BillInfo b, Food c " +
                 "WHERE a.id = b.idBill AND b.idFood = c.id AND DateCheckIn >= '{0} 00:00:01' AND DateCheckOut <= '{1} 23:59:59' " +

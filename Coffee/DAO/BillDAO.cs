@@ -54,7 +54,7 @@ namespace DAO
 
         public DataTable GetBillListByDate(DateTime checkIn, DateTime checkOut)
         {
-            string qr = "" +
+            string qr = "SET DATEFORMAT dmy " +
                 "SELECT b.id AS [Số hóa đơn], b.DateCheckIn AS [Giờ vào], b.DateCheckOut AS [Giờ ra], t.Name AS [Bàn], b.totalPrice AS [Tổng tiền], a.DisplayName as [Thu ngân] " +
                 "FROM Bill AS b, TableFood t, Account a " +
                 "WHERE DateCheckIn >= '" + checkIn.ToShortDateString() + " 00:00:01' AND DateCheckOut <= '" + checkOut.ToShortDateString() + " 23:59:59' AND b.idTable = t.ID AND b.status = 1 AND b.Cashier = a.UserName ";

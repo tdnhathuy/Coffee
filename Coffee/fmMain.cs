@@ -197,7 +197,6 @@ namespace Coffee
 
             LoadFoodListByCategoryID(id);
         }
-
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
             Table table = lsvBill.Tag as Table;
