@@ -997,7 +997,6 @@
                     <TextRun>
                       <Value>Ngày ra:</Value>
                       <Style>
-                        <FontFamily>Cambria</FontFamily>
                         <FontSize>11pt</FontSize>
                       </Style>
                     </TextRun>
@@ -1050,9 +1049,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox20</rd:DefaultName>
               <Top>0.72794in</Top>
-              <Left>3.14062in</Left>
+              <Left>2.50868in</Left>
               <Height>0.25in</Height>
-              <Width>0.65278in</Width>
+              <Width>0.8125in</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -1085,9 +1084,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox20</rd:DefaultName>
               <Top>1.0196in</Top>
-              <Left>3.00174in</Left>
+              <Left>2.50868in</Left>
               <Height>0.25in</Height>
-              <Width>0.79167in</Width>
+              <Width>0.8125in</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
@@ -1122,7 +1121,7 @@
               <Top>1.01959in</Top>
               <Left>0.86458in</Left>
               <Height>0.25in</Height>
-              <Width>2.0816in</Width>
+              <Width>1.52517in</Width>
               <ZIndex>5</ZIndex>
               <Style>
                 <Border>
@@ -1157,7 +1156,7 @@
               <Top>0.72793in</Top>
               <Left>0.86458in</Left>
               <Height>0.25in</Height>
-              <Width>2.0816in</Width>
+              <Width>1.52517in</Width>
               <ZIndex>6</ZIndex>
               <Style>
                 <Border>
@@ -1189,8 +1188,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox20</rd:DefaultName>
-              <Top>0.74182in</Top>
-              <Left>3.7934in</Left>
+              <Top>0.72794in</Top>
+              <Left>3.33507in</Left>
               <Height>0.25in</Height>
               <Width>0.8125in</Width>
               <ZIndex>7</ZIndex>
@@ -1224,8 +1223,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox20</rd:DefaultName>
-              <Top>1.03348in</Top>
-              <Left>3.7934in</Left>
+              <Top>1.0196in</Top>
+              <Left>3.33507in</Left>
               <Height>0.25in</Height>
               <Width>0.8125in</Width>
               <ZIndex>8</ZIndex>
