@@ -47,8 +47,8 @@ namespace Coffee
             {
                 Button btn = new Button()
                 {
-                    Width = 75,
-                    Height = 75,
+                    Width = 100,
+                    Height = 100,
                     Text = item.Name + Environment.NewLine + item.Status
 
                 };
@@ -69,8 +69,8 @@ namespace Coffee
             {
                 Button btnFood = new Button()
                 {
-                    Width = 125,
-                    Height = 70,
+                    Width = 160,
+                    Height = 90,
                     BackColor = Color.PaleGoldenrod,
                     Text = item.Name + Environment.NewLine + item.Price
                 };
@@ -139,8 +139,8 @@ namespace Coffee
             {
                 Button btnCate = new Button()
                 {
-                    Width = 80,
-                    Height = 50,
+                    Width = 100,
+                    Height = 60,
                     BackColor = Color.BurlyWood,
                     Text = item.Name + Environment.NewLine
 

@@ -57,10 +57,11 @@
             reportDataSource1.Value = this.USP_ReportBindingSource;
             this.rpViewer.LocalReport.DataSources.Add(reportDataSource1);
             this.rpViewer.LocalReport.ReportEmbeddedResource = "Coffee.ReportDaily.rdlc";
-            this.rpViewer.Location = new System.Drawing.Point(0, 50);
+            this.rpViewer.Location = new System.Drawing.Point(0, 54);
+            this.rpViewer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rpViewer.Name = "rpViewer";
             this.rpViewer.ServerReport.BearerToken = null;
-            this.rpViewer.Size = new System.Drawing.Size(834, 400);
+            this.rpViewer.Size = new System.Drawing.Size(1251, 638);
             this.rpViewer.TabIndex = 0;
             // 
             // USP_ReportTableAdapter
@@ -69,26 +70,29 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Location = new System.Drawing.Point(18, 18);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 20);
+            this.textBox1.Size = new System.Drawing.Size(265, 26);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(196, 12);
+            this.textBox2.Location = new System.Drawing.Point(294, 18);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 20);
+            this.textBox2.Size = new System.Drawing.Size(265, 26);
             this.textBox2.TabIndex = 2;
             // 
             // fmReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 450);
+            this.ClientSize = new System.Drawing.Size(1251, 692);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.rpViewer);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "fmReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmReport";
