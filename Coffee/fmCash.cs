@@ -39,7 +39,7 @@ namespace Coffee
             this.MaximizeBox = false;
 
             Button btn = null;
-            int size = 60;
+            int size = 90;
             for (int i = 7; i <= 9; i++)
             {
                 btn = new Button { Width = size, Height = size, Text = i + "", BackColor = Color.Aqua };
