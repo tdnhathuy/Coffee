@@ -134,6 +134,16 @@ namespace Coffee
         private void txbSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             dtgvFood.DataSource = FoodDAO.Instance.SearchFoodByName(txbSearch.Text);
+
+            txbFoodID.DataBindings.Clear();
+            txbFoodName.DataBindings.Clear();
+            cbbFoodCate.DataBindings.Clear();
+            nbuFoodPrice.DataBindings.Clear();
+
+            txbFoodID.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "ID", true, DataSourceUpdateMode.Never));
+            txbFoodName.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Tên", true, DataSourceUpdateMode.Never));
+            cbbFoodCate.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Danh mục", true, DataSourceUpdateMode.Never));
+            nbuFoodPrice.DataBindings.Add(new Binding("Value", dtgvFood.DataSource, "Giá", true, DataSourceUpdateMode.Never));
         }
         private void txbBillID_TextChanged(object sender, EventArgs e)
         {

@@ -81,35 +81,35 @@ namespace DAO
 
         public int GetAllInvoice(DateTime checkIn, DateTime checkOut)
         {
-            string qr = "" +
+            string qr = "SET DATEFORMAT DMY " +
                     "SELECT COUNT(*) FROM BILL " +
                     "WHERE DateCheckIn >= '" + checkIn.ToShortDateString() + " 00:00:01' AND DateCheckOut <= '" + checkOut.ToShortDateString() + " 23:59:59' AND status = 1";
             return (int)DataProvider.Instance.ExecuteScalar(qr);
         }
         public string GetMostValueInvoice(DateTime checkIn, DateTime checkOut)
         {
-            string qr = "" +
+            string qr = "SET DATEFORMAT DMY " +
                 "SELECT FORMAT(MAX(totalPrice), '#,### VNĐ') FROM BILL " +
                 "WHERE DateCheckIn >= '" + checkIn.ToShortDateString() + " 00:00:01' AND DateCheckOut <= '" + checkOut.ToShortDateString() + " 23:59:59' AND status = 1";
             return DataProvider.Instance.ExecuteScalar(qr).ToString();
         }
         public string GetLeastValueInvoice(DateTime checkIn, DateTime checkOut)
         {
-            string qr = "" +
+            string qr = "SET DATEFORMAT DMY " +
                 "SELECT FORMAT(MIN(totalPrice), '#,### VNĐ') FROM BILL " +
                 "WHERE DateCheckIn >= '" + checkIn.ToShortDateString() + " 00:00:01' AND DateCheckOut <= '" + checkOut.ToShortDateString() + " 23:59:59' AND status = 1";
             return DataProvider.Instance.ExecuteScalar(qr).ToString();
         }
         public int GetBigInvoice(DateTime checkIn, DateTime checkOut)
         {
-            string qr = "" +
+            string qr = "SET DATEFORMAT DMY " +
                 "SELECT COUNT(*) FROM BILL " +
                 "WHERE totalPrice >= 200000 AND DateCheckIn >= '" + checkIn.ToShortDateString() + " 00:00:01' AND DateCheckOut <= '" + checkOut.ToShortDateString() + " 23:59:59' AND status = 1";
             return (int)DataProvider.Instance.ExecuteScalar(qr);
         }
         public string GetRevenue(DateTime checkIn, DateTime checkOut)
         {
-            string qr = "" +
+            string qr = "SET DATEFORMAT DMY " +
                 "SELECT FORMAT(SUM(totalPrice), '#,### VNĐ') FROM BILL " +
                 "WHERE DateCheckIn >= '" + checkIn.ToShortDateString() + " 00:00:01' AND DateCheckOut <= '" + checkOut.ToShortDateString() + " 23:59:59' AND status = 1";
             return DataProvider.Instance.ExecuteScalar(qr).ToString();

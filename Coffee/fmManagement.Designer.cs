@@ -56,7 +56,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.nbuFoodPrice = new System.Windows.Forms.NumericUpDown();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.txbSearch = new System.Windows.Forms.TextBox();
             this.cbbFoodCate = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -98,6 +97,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.dtgvListFoodSold = new System.Windows.Forms.DataGridView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -113,6 +113,7 @@
             this.tabPage4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvListFoodSold)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -151,9 +152,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(537, 137);
+            this.button1.Location = new System.Drawing.Point(948, 240);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 99);
+            this.button1.Size = new System.Drawing.Size(200, 80);
             this.button1.TabIndex = 9;
             this.button1.Text = "In hóa đơn";
             this.button1.UseVisualStyleBackColor = true;
@@ -172,9 +173,9 @@
             this.groupBox4.Controls.Add(this.lbRevenue);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(693, 8);
+            this.groupBox4.Location = new System.Drawing.Point(17, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(454, 345);
+            this.groupBox4.Size = new System.Drawing.Size(610, 228);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin";
@@ -183,7 +184,7 @@
             // 
             this.lbBigInvoice.AutoSize = true;
             this.lbBigInvoice.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBigInvoice.Location = new System.Drawing.Point(327, 72);
+            this.lbBigInvoice.Location = new System.Drawing.Point(252, 72);
             this.lbBigInvoice.Name = "lbBigInvoice";
             this.lbBigInvoice.Size = new System.Drawing.Size(33, 39);
             this.lbBigInvoice.TabIndex = 9;
@@ -193,7 +194,7 @@
             // 
             this.lbLeastValue.AutoSize = true;
             this.lbLeastValue.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLeastValue.Location = new System.Drawing.Point(327, 111);
+            this.lbLeastValue.Location = new System.Drawing.Point(252, 111);
             this.lbLeastValue.Name = "lbLeastValue";
             this.lbLeastValue.Size = new System.Drawing.Size(33, 39);
             this.lbLeastValue.TabIndex = 8;
@@ -203,7 +204,7 @@
             // 
             this.lbMostValue.AutoSize = true;
             this.lbMostValue.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMostValue.Location = new System.Drawing.Point(327, 150);
+            this.lbMostValue.Location = new System.Drawing.Point(252, 150);
             this.lbMostValue.Name = "lbMostValue";
             this.lbMostValue.Size = new System.Drawing.Size(33, 39);
             this.lbMostValue.TabIndex = 7;
@@ -215,9 +216,9 @@
             this.label13.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(6, 72);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(315, 39);
+            this.label13.Size = new System.Drawing.Size(240, 39);
             this.label13.TabIndex = 6;
-            this.label13.Text = "Hóa đơn trên 200.000:";
+            this.label13.Text = "HĐ trên 200.000:";
             // 
             // label12
             // 
@@ -225,9 +226,9 @@
             this.label12.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(6, 111);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(274, 39);
+            this.label12.Size = new System.Drawing.Size(199, 39);
             this.label12.TabIndex = 5;
-            this.label12.Text = "Hóa đơn nhỏ nhất: ";
+            this.label12.Text = "HĐ nhỏ nhất: ";
             // 
             // label10
             // 
@@ -235,15 +236,15 @@
             this.label10.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(6, 150);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(268, 39);
+            this.label10.Size = new System.Drawing.Size(193, 39);
             this.label10.TabIndex = 4;
-            this.label10.Text = "Hóa đơn lớn nhất: ";
+            this.label10.Text = "HĐ lớn nhất: ";
             // 
             // lbInvoice
             // 
             this.lbInvoice.AutoSize = true;
             this.lbInvoice.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInvoice.Location = new System.Drawing.Point(327, 33);
+            this.lbInvoice.Location = new System.Drawing.Point(252, 33);
             this.lbInvoice.Name = "lbInvoice";
             this.lbInvoice.Size = new System.Drawing.Size(33, 39);
             this.lbInvoice.TabIndex = 3;
@@ -263,7 +264,7 @@
             // 
             this.lbRevenue.AutoSize = true;
             this.lbRevenue.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRevenue.Location = new System.Drawing.Point(327, 189);
+            this.lbRevenue.Location = new System.Drawing.Point(252, 189);
             this.lbRevenue.Name = "lbRevenue";
             this.lbRevenue.Size = new System.Drawing.Size(33, 39);
             this.lbRevenue.TabIndex = 1;
@@ -275,16 +276,16 @@
             this.label9.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(6, 33);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(244, 39);
+            this.label9.Size = new System.Drawing.Size(172, 39);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Tổng số hóa đơn:";
+            this.label9.Text = "Tổng số HĐ:";
             // 
             // txbBillID
             // 
-            this.txbBillID.Location = new System.Drawing.Point(6, 94);
+            this.txbBillID.Location = new System.Drawing.Point(633, 6);
             this.txbBillID.Name = "txbBillID";
             this.txbBillID.ReadOnly = true;
-            this.txbBillID.Size = new System.Drawing.Size(519, 37);
+            this.txbBillID.Size = new System.Drawing.Size(515, 37);
             this.txbBillID.TabIndex = 7;
             this.txbBillID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txbBillID.TextChanged += new System.EventHandler(this.txbBillID_TextChanged);
@@ -296,9 +297,9 @@
             this.columnHeader3,
             this.columnHeader4});
             this.lsvFood.GridLines = true;
-            this.lsvFood.Location = new System.Drawing.Point(6, 137);
+            this.lsvFood.Location = new System.Drawing.Point(633, 49);
             this.lsvFood.Name = "lsvFood";
-            this.lsvFood.Size = new System.Drawing.Size(525, 216);
+            this.lsvFood.Size = new System.Drawing.Size(515, 185);
             this.lsvFood.TabIndex = 6;
             this.lsvFood.UseCompatibleStateImageBehavior = false;
             this.lsvFood.View = System.Windows.Forms.View.Details;
@@ -306,32 +307,33 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Món ăn";
-            this.columnHeader2.Width = 232;
+            this.columnHeader2.Width = 234;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Số lượng";
-            this.columnHeader3.Width = 106;
+            this.columnHeader3.Width = 108;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Thành tiền";
-            this.columnHeader4.Width = 170;
+            this.columnHeader4.Width = 196;
             // 
             // dtgvBill
             // 
             this.dtgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvBill.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtgvBill.Location = new System.Drawing.Point(3, 359);
+            this.dtgvBill.Location = new System.Drawing.Point(3, 326);
             this.dtgvBill.Name = "dtgvBill";
-            this.dtgvBill.Size = new System.Drawing.Size(1150, 355);
+            this.dtgvBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvBill.Size = new System.Drawing.Size(1150, 388);
             this.dtgvBill.TabIndex = 5;
             // 
             // btnShowBill
             // 
-            this.btnShowBill.Location = new System.Drawing.Point(537, 8);
+            this.btnShowBill.Location = new System.Drawing.Point(742, 240);
             this.btnShowBill.Name = "btnShowBill";
-            this.btnShowBill.Size = new System.Drawing.Size(150, 123);
+            this.btnShowBill.Size = new System.Drawing.Size(200, 80);
             this.btnShowBill.TabIndex = 4;
             this.btnShowBill.Text = "Thống kê";
             this.btnShowBill.UseVisualStyleBackColor = true;
@@ -339,23 +341,23 @@
             // 
             // dtpkToDate
             // 
-            this.dtpkToDate.Location = new System.Drawing.Point(157, 51);
+            this.dtpkToDate.Location = new System.Drawing.Point(176, 283);
             this.dtpkToDate.Name = "dtpkToDate";
-            this.dtpkToDate.Size = new System.Drawing.Size(374, 37);
+            this.dtpkToDate.Size = new System.Drawing.Size(560, 37);
             this.dtpkToDate.TabIndex = 3;
             // 
             // dtpkFromDate
             // 
-            this.dtpkFromDate.Location = new System.Drawing.Point(157, 8);
+            this.dtpkFromDate.Location = new System.Drawing.Point(176, 240);
             this.dtpkFromDate.Name = "dtpkFromDate";
-            this.dtpkFromDate.Size = new System.Drawing.Size(374, 37);
+            this.dtpkFromDate.Size = new System.Drawing.Size(560, 37);
             this.dtpkFromDate.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 57);
+            this.label2.Location = new System.Drawing.Point(12, 289);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 29);
             this.label2.TabIndex = 1;
@@ -365,7 +367,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Location = new System.Drawing.Point(12, 248);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 29);
             this.label1.TabIndex = 0;
@@ -385,9 +387,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Controls.Add(this.nbuFoodPrice);
-            this.groupBox2.Controls.Add(this.btnSearch);
-            this.groupBox2.Controls.Add(this.txbSearch);
             this.groupBox2.Controls.Add(this.cbbFoodCate);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
@@ -415,31 +416,22 @@
             0,
             0,
             0});
-            this.nbuFoodPrice.Location = new System.Drawing.Point(430, 157);
+            this.nbuFoodPrice.Location = new System.Drawing.Point(418, 165);
             this.nbuFoodPrice.Maximum = new decimal(new int[] {
             1000000000,
             0,
             0,
             0});
             this.nbuFoodPrice.Name = "nbuFoodPrice";
-            this.nbuFoodPrice.Size = new System.Drawing.Size(241, 37);
+            this.nbuFoodPrice.Size = new System.Drawing.Size(311, 37);
             this.nbuFoodPrice.TabIndex = 18;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(6, 164);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(192, 40);
-            this.btnSearch.TabIndex = 17;
-            this.btnSearch.Text = "Tìm";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.nbuFoodPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txbSearch
             // 
-            this.txbSearch.Location = new System.Drawing.Point(6, 210);
+            this.txbSearch.Location = new System.Drawing.Point(6, 36);
             this.txbSearch.Name = "txbSearch";
-            this.txbSearch.Size = new System.Drawing.Size(186, 37);
+            this.txbSearch.Size = new System.Drawing.Size(262, 37);
             this.txbSearch.TabIndex = 16;
             this.txbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSearch_KeyPress);
             // 
@@ -447,15 +439,15 @@
             // 
             this.cbbFoodCate.Enabled = false;
             this.cbbFoodCate.FormattingEnabled = true;
-            this.cbbFoodCate.Location = new System.Drawing.Point(430, 114);
+            this.cbbFoodCate.Location = new System.Drawing.Point(418, 122);
             this.cbbFoodCate.Name = "cbbFoodCate";
-            this.cbbFoodCate.Size = new System.Drawing.Size(241, 37);
+            this.cbbFoodCate.Size = new System.Drawing.Size(311, 37);
             this.cbbFoodCate.TabIndex = 15;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(311, 165);
+            this.label6.Location = new System.Drawing.Point(355, 175);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 29);
             this.label6.TabIndex = 14;
@@ -464,7 +456,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(311, 117);
+            this.label5.Location = new System.Drawing.Point(288, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 29);
             this.label5.TabIndex = 13;
@@ -473,7 +465,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(311, 79);
+            this.label4.Location = new System.Drawing.Point(353, 87);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 29);
             this.label4.TabIndex = 12;
@@ -482,23 +474,23 @@
             // txbFoodName
             // 
             this.txbFoodName.Enabled = false;
-            this.txbFoodName.Location = new System.Drawing.Point(430, 71);
+            this.txbFoodName.Location = new System.Drawing.Point(418, 79);
             this.txbFoodName.Name = "txbFoodName";
-            this.txbFoodName.Size = new System.Drawing.Size(241, 37);
+            this.txbFoodName.Size = new System.Drawing.Size(311, 37);
             this.txbFoodName.TabIndex = 9;
             // 
             // txbFoodID
             // 
             this.txbFoodID.Enabled = false;
-            this.txbFoodID.Location = new System.Drawing.Point(430, 28);
+            this.txbFoodID.Location = new System.Drawing.Point(418, 36);
             this.txbFoodID.Name = "txbFoodID";
-            this.txbFoodID.Size = new System.Drawing.Size(241, 37);
+            this.txbFoodID.Size = new System.Drawing.Size(311, 37);
             this.txbFoodID.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(311, 39);
+            this.label3.Location = new System.Drawing.Point(367, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 29);
             this.label3.TabIndex = 7;
@@ -506,7 +498,7 @@
             // 
             // btnFoodDel
             // 
-            this.btnFoodDel.Location = new System.Drawing.Point(6, 120);
+            this.btnFoodDel.Location = new System.Drawing.Point(3, 121);
             this.btnFoodDel.Name = "btnFoodDel";
             this.btnFoodDel.Size = new System.Drawing.Size(192, 40);
             this.btnFoodDel.TabIndex = 6;
@@ -516,7 +508,7 @@
             // 
             // btnFoodEdit
             // 
-            this.btnFoodEdit.Location = new System.Drawing.Point(6, 74);
+            this.btnFoodEdit.Location = new System.Drawing.Point(6, 73);
             this.btnFoodEdit.Name = "btnFoodEdit";
             this.btnFoodEdit.Size = new System.Drawing.Size(192, 40);
             this.btnFoodEdit.TabIndex = 5;
@@ -540,6 +532,7 @@
             this.dtgvFood.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgvFood.Location = new System.Drawing.Point(3, 253);
             this.dtgvFood.Name = "dtgvFood";
+            this.dtgvFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvFood.Size = new System.Drawing.Size(841, 455);
             this.dtgvFood.TabIndex = 1;
             this.dtgvFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvFood_CellClick);
@@ -632,6 +625,7 @@
             this.dtgvCategory.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgvCategory.Location = new System.Drawing.Point(3, 253);
             this.dtgvCategory.Name = "dtgvCategory";
+            this.dtgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvCategory.Size = new System.Drawing.Size(291, 455);
             this.dtgvCategory.TabIndex = 0;
             this.dtgvCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvCategory_CellClick);
@@ -659,9 +653,9 @@
             // btnTableDel
             // 
             this.btnTableDel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableDel.Location = new System.Drawing.Point(1050, 162);
+            this.btnTableDel.Location = new System.Drawing.Point(414, 165);
             this.btnTableDel.Name = "btnTableDel";
-            this.btnTableDel.Size = new System.Drawing.Size(100, 45);
+            this.btnTableDel.Size = new System.Drawing.Size(120, 55);
             this.btnTableDel.TabIndex = 9;
             this.btnTableDel.Text = "Xóa";
             this.btnTableDel.UseVisualStyleBackColor = true;
@@ -670,9 +664,9 @@
             // btnTableEdit
             // 
             this.btnTableEdit.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableEdit.Location = new System.Drawing.Point(944, 162);
+            this.btnTableEdit.Location = new System.Drawing.Point(288, 165);
             this.btnTableEdit.Name = "btnTableEdit";
-            this.btnTableEdit.Size = new System.Drawing.Size(100, 45);
+            this.btnTableEdit.Size = new System.Drawing.Size(120, 55);
             this.btnTableEdit.TabIndex = 8;
             this.btnTableEdit.Text = "Sửa";
             this.btnTableEdit.UseVisualStyleBackColor = true;
@@ -681,9 +675,9 @@
             // btnTableAdd
             // 
             this.btnTableAdd.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableAdd.Location = new System.Drawing.Point(838, 162);
+            this.btnTableAdd.Location = new System.Drawing.Point(162, 165);
             this.btnTableAdd.Name = "btnTableAdd";
-            this.btnTableAdd.Size = new System.Drawing.Size(100, 45);
+            this.btnTableAdd.Size = new System.Drawing.Size(120, 55);
             this.btnTableAdd.TabIndex = 7;
             this.btnTableAdd.Text = "Thêm";
             this.btnTableAdd.UseVisualStyleBackColor = true;
@@ -693,16 +687,16 @@
             // 
             this.txbTableStatus.Enabled = false;
             this.txbTableStatus.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTableStatus.Location = new System.Drawing.Point(838, 110);
+            this.txbTableStatus.Location = new System.Drawing.Point(162, 113);
             this.txbTableStatus.Name = "txbTableStatus";
-            this.txbTableStatus.Size = new System.Drawing.Size(310, 46);
+            this.txbTableStatus.Size = new System.Drawing.Size(466, 46);
             this.txbTableStatus.TabIndex = 6;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(684, 117);
+            this.label16.Location = new System.Drawing.Point(8, 120);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(148, 39);
             this.label16.TabIndex = 5;
@@ -712,16 +706,16 @@
             // 
             this.txbTableName.Enabled = false;
             this.txbTableName.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTableName.Location = new System.Drawing.Point(838, 58);
+            this.txbTableName.Location = new System.Drawing.Point(162, 61);
             this.txbTableName.Name = "txbTableName";
-            this.txbTableName.Size = new System.Drawing.Size(310, 46);
+            this.txbTableName.Size = new System.Drawing.Size(466, 46);
             this.txbTableName.TabIndex = 4;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(684, 65);
+            this.label15.Location = new System.Drawing.Point(8, 68);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(120, 39);
             this.label15.TabIndex = 3;
@@ -731,16 +725,16 @@
             // 
             this.txbTableID.Enabled = false;
             this.txbTableID.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTableID.Location = new System.Drawing.Point(838, 6);
+            this.txbTableID.Location = new System.Drawing.Point(162, 9);
             this.txbTableID.Name = "txbTableID";
-            this.txbTableID.Size = new System.Drawing.Size(310, 46);
+            this.txbTableID.Size = new System.Drawing.Size(466, 46);
             this.txbTableID.TabIndex = 2;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(684, 13);
+            this.label14.Location = new System.Drawing.Point(8, 16);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(46, 39);
             this.label14.TabIndex = 1;
@@ -749,10 +743,11 @@
             // dtgvTable
             // 
             this.dtgvTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvTable.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dtgvTable.Location = new System.Drawing.Point(3, 3);
+            this.dtgvTable.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtgvTable.Location = new System.Drawing.Point(3, 226);
             this.dtgvTable.Name = "dtgvTable";
-            this.dtgvTable.Size = new System.Drawing.Size(675, 711);
+            this.dtgvTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvTable.Size = new System.Drawing.Size(1150, 488);
             this.dtgvTable.TabIndex = 0;
             // 
             // tabPage4
@@ -785,9 +780,9 @@
             // 
             // btnExportReport
             // 
-            this.btnExportReport.Location = new System.Drawing.Point(844, 115);
+            this.btnExportReport.Location = new System.Drawing.Point(994, 36);
             this.btnExportReport.Name = "btnExportReport";
-            this.btnExportReport.Size = new System.Drawing.Size(150, 59);
+            this.btnExportReport.Size = new System.Drawing.Size(150, 80);
             this.btnExportReport.TabIndex = 10;
             this.btnExportReport.Text = "Xuất báo cáo";
             this.btnExportReport.UseVisualStyleBackColor = true;
@@ -795,9 +790,9 @@
             // 
             // btnViewReport
             // 
-            this.btnViewReport.Location = new System.Drawing.Point(688, 115);
+            this.btnViewReport.Location = new System.Drawing.Point(838, 36);
             this.btnViewReport.Name = "btnViewReport";
-            this.btnViewReport.Size = new System.Drawing.Size(150, 59);
+            this.btnViewReport.Size = new System.Drawing.Size(150, 80);
             this.btnViewReport.TabIndex = 9;
             this.btnViewReport.Text = "Xem báo cáo";
             this.btnViewReport.UseVisualStyleBackColor = true;
@@ -805,14 +800,14 @@
             // 
             // dtpkReportTo
             // 
-            this.dtpkReportTo.Location = new System.Drawing.Point(688, 69);
+            this.dtpkReportTo.Location = new System.Drawing.Point(240, 79);
             this.dtpkReportTo.Name = "dtpkReportTo";
             this.dtpkReportTo.Size = new System.Drawing.Size(456, 37);
             this.dtpkReportTo.TabIndex = 8;
             // 
             // dtpkReportFrom
             // 
-            this.dtpkReportFrom.Location = new System.Drawing.Point(688, 26);
+            this.dtpkReportFrom.Location = new System.Drawing.Point(240, 36);
             this.dtpkReportFrom.Name = "dtpkReportFrom";
             this.dtpkReportFrom.Size = new System.Drawing.Size(457, 37);
             this.dtpkReportFrom.TabIndex = 7;
@@ -821,7 +816,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(537, 77);
+            this.label17.Location = new System.Drawing.Point(86, 87);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(148, 29);
             this.label17.TabIndex = 6;
@@ -831,7 +826,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(537, 32);
+            this.label18.Location = new System.Drawing.Point(89, 44);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(145, 29);
             this.label18.TabIndex = 5;
@@ -840,11 +835,23 @@
             // dtgvListFoodSold
             // 
             this.dtgvListFoodSold.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvListFoodSold.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dtgvListFoodSold.Location = new System.Drawing.Point(3, 33);
+            this.dtgvListFoodSold.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtgvListFoodSold.Location = new System.Drawing.Point(3, 122);
             this.dtgvListFoodSold.Name = "dtgvListFoodSold";
-            this.dtgvListFoodSold.Size = new System.Drawing.Size(528, 675);
+            this.dtgvListFoodSold.ReadOnly = true;
+            this.dtgvListFoodSold.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvListFoodSold.Size = new System.Drawing.Size(1144, 586);
             this.dtgvListFoodSold.TabIndex = 0;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.txbSearch);
+            this.groupBox5.Location = new System.Drawing.Point(6, 167);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(274, 80);
+            this.groupBox5.TabIndex = 19;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Tìm kiếm";
             // 
             // fmManagement
             // 
@@ -879,6 +886,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvListFoodSold)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -915,7 +924,6 @@
         private System.Windows.Forms.TextBox txbCateID;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbbFoodCate;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txbSearch;
         private System.Windows.Forms.NumericUpDown nbuFoodPrice;
         private System.Windows.Forms.ListView lsvFood;
@@ -955,5 +963,6 @@
         private System.Windows.Forms.Button btnTableEdit;
         private System.Windows.Forms.Button btnTableAdd;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox5;
     }
 }

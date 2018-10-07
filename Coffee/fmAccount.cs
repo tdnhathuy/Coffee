@@ -37,6 +37,8 @@ namespace Coffee
 
             txbUsername.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "Tài khoản", true, DataSourceUpdateMode.Never));
             txbDisplayname.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "Tên hiển thị", true, DataSourceUpdateMode.Never));
+
+            txbPassword.Text = "";
         }
 
         private void btnAcountAdd_Click(object sender, EventArgs e)

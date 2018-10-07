@@ -47,20 +47,20 @@
             // 
             this.dtgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvAccount.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtgvAccount.Location = new System.Drawing.Point(0, 168);
+            this.dtgvAccount.Location = new System.Drawing.Point(0, 217);
             this.dtgvAccount.Name = "dtgvAccount";
             this.dtgvAccount.ReadOnly = true;
             this.dtgvAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvAccount.Size = new System.Drawing.Size(584, 243);
+            this.dtgvAccount.Size = new System.Drawing.Size(693, 287);
             this.dtgvAccount.TabIndex = 0;
             this.dtgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvAccount_CellClick);
             // 
             // txbUsername
             // 
             this.txbUsername.Enabled = false;
-            this.txbUsername.Location = new System.Drawing.Point(150, 12);
+            this.txbUsername.Location = new System.Drawing.Point(187, 12);
             this.txbUsername.Name = "txbUsername";
-            this.txbUsername.Size = new System.Drawing.Size(296, 33);
+            this.txbUsername.Size = new System.Drawing.Size(320, 46);
             this.txbUsername.TabIndex = 1;
             // 
             // label1
@@ -68,49 +68,49 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 26);
+            this.label1.Size = new System.Drawing.Size(141, 39);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tài khoản";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 58);
+            this.label2.Location = new System.Drawing.Point(12, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 26);
+            this.label2.Size = new System.Drawing.Size(141, 39);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mật khẩu";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 97);
+            this.label3.Location = new System.Drawing.Point(12, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 26);
+            this.label3.Size = new System.Drawing.Size(169, 39);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tên hiển thị";
             // 
             // txbPassword
             // 
             this.txbPassword.Enabled = false;
-            this.txbPassword.Location = new System.Drawing.Point(150, 51);
+            this.txbPassword.Location = new System.Drawing.Point(187, 64);
             this.txbPassword.Name = "txbPassword";
-            this.txbPassword.Size = new System.Drawing.Size(296, 33);
+            this.txbPassword.Size = new System.Drawing.Size(320, 46);
             this.txbPassword.TabIndex = 5;
             // 
             // txbDisplayname
             // 
             this.txbDisplayname.Enabled = false;
-            this.txbDisplayname.Location = new System.Drawing.Point(150, 90);
+            this.txbDisplayname.Location = new System.Drawing.Point(187, 116);
             this.txbDisplayname.Name = "txbDisplayname";
-            this.txbDisplayname.Size = new System.Drawing.Size(296, 33);
+            this.txbDisplayname.Size = new System.Drawing.Size(320, 46);
             this.txbDisplayname.TabIndex = 6;
             // 
             // btnAcountAdd
             // 
-            this.btnAcountAdd.Location = new System.Drawing.Point(452, 12);
+            this.btnAcountAdd.Location = new System.Drawing.Point(528, 14);
             this.btnAcountAdd.Name = "btnAcountAdd";
-            this.btnAcountAdd.Size = new System.Drawing.Size(120, 33);
+            this.btnAcountAdd.Size = new System.Drawing.Size(150, 45);
             this.btnAcountAdd.TabIndex = 7;
             this.btnAcountAdd.Text = "Thêm";
             this.btnAcountAdd.UseVisualStyleBackColor = true;
@@ -118,9 +118,9 @@
             // 
             // btnAccountEdit
             // 
-            this.btnAccountEdit.Location = new System.Drawing.Point(452, 51);
+            this.btnAccountEdit.Location = new System.Drawing.Point(528, 65);
             this.btnAccountEdit.Name = "btnAccountEdit";
-            this.btnAccountEdit.Size = new System.Drawing.Size(120, 33);
+            this.btnAccountEdit.Size = new System.Drawing.Size(150, 45);
             this.btnAccountEdit.TabIndex = 8;
             this.btnAccountEdit.Text = "Sửa";
             this.btnAccountEdit.UseVisualStyleBackColor = true;
@@ -128,9 +128,9 @@
             // 
             // btnAccountDel
             // 
-            this.btnAccountDel.Location = new System.Drawing.Point(452, 90);
+            this.btnAccountDel.Location = new System.Drawing.Point(528, 117);
             this.btnAccountDel.Name = "btnAccountDel";
-            this.btnAccountDel.Size = new System.Drawing.Size(120, 33);
+            this.btnAccountDel.Size = new System.Drawing.Size(150, 45);
             this.btnAccountDel.TabIndex = 9;
             this.btnAccountDel.Text = "Xóa";
             this.btnAccountDel.UseVisualStyleBackColor = true;
@@ -140,9 +140,9 @@
             // 
             this.rdbStaff.AutoSize = true;
             this.rdbStaff.Enabled = false;
-            this.rdbStaff.Location = new System.Drawing.Point(252, 132);
+            this.rdbStaff.Location = new System.Drawing.Point(334, 168);
             this.rdbStaff.Name = "rdbStaff";
-            this.rdbStaff.Size = new System.Drawing.Size(116, 30);
+            this.rdbStaff.Size = new System.Drawing.Size(173, 43);
             this.rdbStaff.TabIndex = 11;
             this.rdbStaff.TabStop = true;
             this.rdbStaff.Text = "Nhân viên";
@@ -152,9 +152,9 @@
             // 
             this.rdbManager.AutoSize = true;
             this.rdbManager.Enabled = false;
-            this.rdbManager.Location = new System.Drawing.Point(150, 132);
+            this.rdbManager.Location = new System.Drawing.Point(187, 168);
             this.rdbManager.Name = "rdbManager";
-            this.rdbManager.Size = new System.Drawing.Size(96, 30);
+            this.rdbManager.Size = new System.Drawing.Size(141, 43);
             this.rdbManager.TabIndex = 12;
             this.rdbManager.TabStop = true;
             this.rdbManager.Text = "Quản lý";
@@ -162,9 +162,9 @@
             // 
             // fmAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 411);
+            this.ClientSize = new System.Drawing.Size(693, 504);
             this.Controls.Add(this.rdbManager);
             this.Controls.Add(this.rdbStaff);
             this.Controls.Add(this.btnAccountDel);
