@@ -55,8 +55,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.nbuFoodPrice = new System.Windows.Forms.NumericUpDown();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txbSearch = new System.Windows.Forms.TextBox();
+            this.nbuFoodPrice = new System.Windows.Forms.NumericUpDown();
             this.cbbFoodCate = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -97,13 +98,13 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.dtgvListFoodSold = new System.Windows.Forms.DataGridView();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbuFoodPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -113,7 +114,6 @@
             this.tabPage4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvListFoodSold)).BeginInit();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -408,6 +408,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách món ăn";
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.txbSearch);
+            this.groupBox5.Location = new System.Drawing.Point(6, 167);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(274, 80);
+            this.groupBox5.TabIndex = 19;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Tìm kiếm";
+            // 
+            // txbSearch
+            // 
+            this.txbSearch.Location = new System.Drawing.Point(6, 36);
+            this.txbSearch.Name = "txbSearch";
+            this.txbSearch.Size = new System.Drawing.Size(262, 37);
+            this.txbSearch.TabIndex = 16;
+            this.txbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSearch_KeyPress);
+            // 
             // nbuFoodPrice
             // 
             this.nbuFoodPrice.Enabled = false;
@@ -426,14 +444,6 @@
             this.nbuFoodPrice.Size = new System.Drawing.Size(311, 37);
             this.nbuFoodPrice.TabIndex = 18;
             this.nbuFoodPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txbSearch
-            // 
-            this.txbSearch.Location = new System.Drawing.Point(6, 36);
-            this.txbSearch.Name = "txbSearch";
-            this.txbSearch.Size = new System.Drawing.Size(262, 37);
-            this.txbSearch.TabIndex = 16;
-            this.txbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSearch_KeyPress);
             // 
             // cbbFoodCate
             // 
@@ -843,16 +853,6 @@
             this.dtgvListFoodSold.Size = new System.Drawing.Size(1144, 586);
             this.dtgvListFoodSold.TabIndex = 0;
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.txbSearch);
-            this.groupBox5.Location = new System.Drawing.Point(6, 167);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(274, 80);
-            this.groupBox5.TabIndex = 19;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Tìm kiếm";
-            // 
             // fmManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
@@ -863,7 +863,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fmManagement";
+            this.Text = "Quản lý";
             this.Load += new System.EventHandler(this.fmManagement_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -874,6 +874,8 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbuFoodPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -886,8 +888,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvListFoodSold)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
