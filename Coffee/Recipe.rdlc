@@ -509,7 +509,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!price.Value)</Value>
+                                  <Value>=FORMAT(Sum(Fields!price.Value),"#,## VNĐ")</Value>
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
                                     <FontSize>11pt</FontSize>
@@ -546,7 +546,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Column1.Value)</Value>
+                                  <Value>=Format(Sum(Fields!Column1.Value), "#,## VNĐ")</Value>
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
                                     <FontSize>11pt</FontSize>
@@ -840,7 +840,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!totalPrice.Value</Value>
+                                  <Value>=Format(Fields!totalPrice.Value, "#,## VNĐ")</Value>
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
                                     <FontSize>14pt</FontSize>
@@ -900,7 +900,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DSRecipe</DataSetName>
-            <Top>0.01389in</Top>
+            <Top>0.02777in</Top>
             <Height>1.25in</Height>
             <Width>4.73573in</Width>
             <Style>
@@ -910,13 +910,13 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2.65625in</Height>
+        <Height>1.42014in</Height>
         <Style />
       </Body>
       <Width>4.73573in</Width>
       <Page>
         <PageHeader>
-          <Height>1.45833in</Height>
+          <Height>1.57516in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1008,8 +1008,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox20</rd:DefaultName>
-              <Top>1.0196in</Top>
-              <Left>0.09028in</Left>
+              <Top>1.03349in</Top>
+              <Left>0.10417in</Left>
               <Height>0.25in</Height>
               <Width>0.76042in</Width>
               <ZIndex>2</ZIndex>
@@ -1049,8 +1049,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox20</rd:DefaultName>
-              <Top>0.72794in</Top>
-              <Left>3.14062in</Left>
+              <Top>1.32516in</Top>
+              <Left>0.09028in</Left>
               <Height>0.25in</Height>
               <Width>0.65278in</Width>
               <ZIndex>3</ZIndex>
@@ -1084,8 +1084,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox20</rd:DefaultName>
-              <Top>1.0196in</Top>
-              <Left>3.00174in</Left>
+              <Top>1.32515in</Top>
+              <Left>1.96268in</Left>
               <Height>0.25in</Height>
               <Width>0.79167in</Width>
               <ZIndex>4</ZIndex>
@@ -1119,10 +1119,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox20</rd:DefaultName>
-              <Top>1.01959in</Top>
-              <Left>0.86458in</Left>
+              <Top>1.03348in</Top>
+              <Left>0.87847in</Left>
               <Height>0.25in</Height>
-              <Width>2.0816in</Width>
+              <Width>3.32466in</Width>
               <ZIndex>5</ZIndex>
               <Style>
                 <Border>
@@ -1157,7 +1157,7 @@
               <Top>0.72793in</Top>
               <Left>0.86458in</Left>
               <Height>0.25in</Height>
-              <Width>2.0816in</Width>
+              <Width>3.32466in</Width>
               <ZIndex>6</ZIndex>
               <Style>
                 <Border>
@@ -1189,10 +1189,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox20</rd:DefaultName>
-              <Top>0.74182in</Top>
-              <Left>3.7934in</Left>
+              <Top>1.32516in</Top>
+              <Left>0.86458in</Left>
               <Height>0.25in</Height>
-              <Width>0.8125in</Width>
+              <Width>1.0981in</Width>
               <ZIndex>7</ZIndex>
               <Style>
                 <Border>
@@ -1224,10 +1224,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox20</rd:DefaultName>
-              <Top>1.03348in</Top>
-              <Left>3.7934in</Left>
+              <Top>1.32515in</Top>
+              <Left>2.78212in</Left>
               <Height>0.25in</Height>
-              <Width>0.8125in</Width>
+              <Width>1.95361in</Width>
               <ZIndex>8</ZIndex>
               <Style>
                 <Border>

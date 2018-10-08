@@ -79,8 +79,8 @@
                                 <TextRun>
                                   <Value>Tên món</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>14pt</FontSize>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>#666666</Color>
                                   </Style>
@@ -116,8 +116,8 @@
                                 <TextRun>
                                   <Value>SL</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>14pt</FontSize>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>#666666</Color>
                                   </Style>
@@ -153,8 +153,8 @@
                                 <TextRun>
                                   <Value>Đơn giá</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>14pt</FontSize>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>#666666</Color>
                                   </Style>
@@ -190,8 +190,8 @@
                                 <TextRun>
                                   <Value>Thành tiền</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>14pt</FontSize>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>#666666</Color>
                                   </Style>
@@ -232,8 +232,8 @@
                                 <TextRun>
                                   <Value>=Fields!name.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Normal</FontWeight>
                                     <Color>#333333</Color>
                                   </Style>
@@ -269,8 +269,8 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!Column1.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Normal</FontWeight>
                                     <Color>#333333</Color>
                                   </Style>
@@ -306,8 +306,8 @@
                                 <TextRun>
                                   <Value>=Fields!Column2.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Normal</FontWeight>
                                     <Color>#333333</Color>
                                   </Style>
@@ -343,6 +343,48 @@
                                 <TextRun>
                                   <Value>=Fields!Column3.Value</Value>
                                   <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Column3</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox10">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Normal</FontWeight>
@@ -355,7 +397,118 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Column3</rd:DefaultName>
+                          <rd:DefaultName>Textbox10</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox12">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox12</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox17">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Tổng tiền</Value>
+                                  <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox17</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Column31">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=FORMAT(Sum(CInt(Split(Fields!Column3.Value.ToString(), " ").GetValue(0))), "#,## VNĐ")</Value>
+                                  <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Column31</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -389,11 +542,14 @@
                 <TablixMember>
                   <Group Name="Details" />
                 </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSetReport</DataSetName>
             <Top>0.06944in</Top>
-            <Height>0.5in</Height>
+            <Height>0.75in</Height>
             <Width>5.17708in</Width>
             <Style>
               <Border>
@@ -421,8 +577,8 @@
                     <TextRun>
                       <Value>BÁO  CÁO DOANH SỐ</Value>
                       <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>36pt</FontSize>
+                        <FontFamily>Cambria</FontFamily>
+                        <FontSize>33pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -452,7 +608,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>Từ ngày: </Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Cambria</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -482,7 +640,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>Từ ngày: </Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Cambria</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -513,6 +673,7 @@
                     <TextRun>
                       <Value>=Parameters!DateFrom.Value</Value>
                       <Style>
+                        <FontFamily>Cambria</FontFamily>
                         <Format>d</Format>
                       </Style>
                     </TextRun>
@@ -547,6 +708,7 @@
                     <TextRun>
                       <Value>=Parameters!DateTo.Value</Value>
                       <Style>
+                        <FontFamily>Cambria</FontFamily>
                         <Format>d</Format>
                       </Style>
                     </TextRun>
