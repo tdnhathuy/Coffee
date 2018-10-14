@@ -34,6 +34,7 @@ namespace Coffee
         private void LoadBill(DateTime checkIn, DateTime checkOut)
         {
             dtgvBill.DataSource = BillDAO.Instance.GetBillListByDate(checkIn, checkOut);
+
             dtgvBill.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dtgvBill.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dtgvBill.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
